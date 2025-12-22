@@ -1,300 +1,280 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>História SPŠ Technická Trnava</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>História SPŠ Technická Trnava</title>
 
-  <style>
-    :root {
-      --modra: #0c2f96;
-      --zlta: #ceed2f;
-      --biela: #acbfbd;
-      --pozadie: var(--biela);
-      --text: #0c2f96;
-    }
+<style>
+:root {
+  --modra: #0c2f96;
+  --zlta: #ceed2f;
+  --pozadie: #f2f5f5;
+  --text: #0c2f96;
+}
 
-    .dark-mode {
-      --modra: #b5c8ff;
-      --zlta: #f0f169;
-      --biela: #1e1e1e;
-      --pozadie: #121212;
-      --text: #e2e2e2;
-    }
+.dark-mode {
+  --pozadie: #121212;
+  --text: #e2e2e2;
+  --modra: #b5c8ff;
+  --zlta: #f0f169;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background-color: var(--pozadie);
-      color: var(--text);
-    }
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--pozadie);
+  color: var(--text);
+}
 
-    /* ===== HEADER ===== */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: var(--biela);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-    .logo {
-      height: 125px;
-      background-color: #5e8fd8;
-      padding: 6px 10px;
-      border-radius: 10px;
-    }
+.logo {
+  height: 120px;
+  background: #5e8fd8;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
 
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+.header-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
 
-    .menu-toggle {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 28px;
-      height: 20px;
-      cursor: pointer;
-    }
+.menu-toggle {
+  width: 28px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
 
-    .menu-toggle span {
-      height: 3px;
-      background-color: var(--modra);
-      border-radius: 3px;
-    }
+.menu-toggle span {
+  height: 3px;
+  background: var(--modra);
+  border-radius: 3px;
+}
 
-    .menu-toggle.active span:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-    .menu-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
+.menu-toggle.active span:nth-child(1) {transform: translateY(8px) rotate(45deg);}
+.menu-toggle.active span:nth-child(2) {opacity: 0;}
+.menu-toggle.active span:nth-child(3) {transform: translateY(-8px) rotate(-45deg);}
 
-    .theme-toggle {
-      background: none;
-      border: 2px solid var(--zlta);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      font-size: 1.2rem;
-    }
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--zlta);
+  background: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
 
-    /* ===== NAV ===== */
-    nav {
-      display: none;
-      justify-content: center;
-      gap: 2rem;
-      background-color: var(--biela);
-      padding: 1rem;
-      position: fixed;
-      width: 100%;
-      left: 0;
-      z-index: 99;
-    }
+/* ================= NAV ================= */
+nav {
+  display: none;
+  position: fixed;
+  width: 100%;
+  background: white;
+  left: 0;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
 
-    nav.show {
-      display: flex;
-    }
+nav.show { display: flex; }
 
-    nav a {
-      text-decoration: none;
-      font-weight: 600;
-      color: var(--modra);
-    }
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--modra);
+}
 
-    /* ===== HERO ===== */
-    .hero {
-      background: linear-gradient(rgba(0,74,173,0.6), rgba(0,74,173,0.6)),
-        url('historia.jpg') center/cover no-repeat;
-      color: var(--biela);
-      text-align: center;
-      padding: 8rem 2rem;
-    }
+/* ================= HERO ================= */
+.hero {
+  background: linear-gradient(rgba(0,74,173,.6), rgba(0,74,173,.6)),
+              url("historia.jpg") center/cover no-repeat;
+  padding: 7rem 2rem;
+  text-align: center;
+  color: white;
+}
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      font-family: Georgia, serif;
-    }
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-    .hero p {
-      color: var(--zlta);
-      max-width: 600px;
-      margin: auto;
-      font-size: 1.2rem;
-    }
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  color: var(--zlta);
+  font-size: 1.2rem;
+}
 
-    /* ===== SECTION ===== */
-    .section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 3rem 2rem;
-    }
+/* ================= SECTION ================= */
+.section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
 
-    .section h2 {
-      border-left: 5px solid var(--zlta);
-      padding-left: 10px;
-      color: var(--modra);
-    }
+.section h2 {
+  border-left: 5px solid var(--zlta);
+  padding-left: 10px;
+}
 
-    .section p {
-      text-align: justify;
-      line-height: 1.8;
-    }
+.section p {
+  line-height: 1.8;
+  text-align: justify;
+}
 
-    /* ===== TIMELINE ===== */
-    .timeline {
-      position: relative;
-      max-width: 900px;
-      margin: 4rem auto;
-    }
+/* ================= TIMELINE DESKTOP ================= */
+.timeline {
+  max-width: 900px;
+  margin: 4rem auto;
+  position: relative;
+}
 
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      background-color: var(--modra);
-      top: 0;
-      bottom: 0;
-      left: 50%;
-    }
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background: var(--modra);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
 
-    .timeline-item {
-      width: 50%;
-      padding: 2rem 3rem;
-      background-color: var(--pozadie);
-      margin-bottom: 4rem;
-      border-radius: 10px;
-      position: relative;
-    }
+.timeline-item {
+  width: 50%;
+  padding: 2rem 3rem;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 4rem;
+}
 
-    .timeline-item.left {
-      left: 0;
-      text-align: right;
-    }
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
 
-    .timeline-item.right {
-      left: 50%;
-    }
+.timeline-item.right {
+  left: 50%;
+}
 
-    .timeline-item::before {
-      content: '';
-      width: 20px;
-      height: 20px;
-      background-color: var(--zlta);
-      border: 3px solid var(--modra);
-      border-radius: 50%;
-      position: absolute;
-      top: 20px;
-    }
+.timeline-item::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: var(--zlta);
+  border: 3px solid var(--modra);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+}
 
-    .timeline-item.left::before {
-      right: -10px;
-    }
+.timeline-item.left::before { right: -10px; }
+.timeline-item.right::before { left: -10px; }
 
-    .timeline-item.right::before {
-      left: -10px;
-    }
+.timeline-item img {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+  max-height: 250px;
+  object-fit: cover;
+}
 
-    .timeline-item img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 1rem;
-      max-height: 250px;
-      object-fit: cover;
-    }
+/* ================= MOBILE – FINÁLNA OPRAVA ================= */
+@media (max-width: 768px) {
 
-    /* ================= MOBILE ================= */
-    @media screen and (max-width: 768px) {
+  header {
+    padding: .6rem 1rem;
+  }
 
-      header {
-        padding: 0.6rem 1rem;
-      }
+  .logo {
+    height: 60px;
+  }
 
-      .logo {
-        height: 60px;
-        padding: 4px 6px;
-      }
+  nav {
+    gap: 1rem;
+  }
 
-      .theme-toggle {
-        width: 34px;
-        height: 34px;
-        font-size: 1rem;
-      }
+  .hero {
+    padding: 3.5rem 1.2rem;
+  }
 
-      nav {
-        gap: 1rem;
-      }
+  .hero h1 {
+    font-size: 1.9rem;
+  }
 
-      nav a {
-        font-size: 1.1rem;
-      }
+  .hero p {
+    font-size: 1rem;
+  }
 
-      .hero {
-        padding: 4rem 1.2rem;
-      }
+  .section {
+    padding: 2rem 1.2rem;
+  }
 
-      .hero h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-      }
+  .section p {
+    text-align: left;
+    font-size: .95rem;
+  }
 
-      .hero p {
-        font-size: 1rem;
-      }
+  /* ===== TIMELINE MOBILE FIX ===== */
+  .timeline::after {
+    display: none;
+  }
 
-      .section {
-        padding: 2rem 1.2rem;
-      }
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    transform: none !important;
+    padding: 1.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
 
-      .section p {
-        text-align: left;
-        font-size: 0.95rem;
-      }
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
 
-      .timeline::after {
-        left: 20px;
-      }
+  .timeline-item::before {
+    left: 15px;
+    top: -10px;
+  }
 
-      .timeline-item {
-        width: 100%;
-        left: 0 !important;
-        padding: 1.5rem 1.5rem 1.5rem 3rem;
-        text-align: left;
-      }
+  .timeline-item img {
+    max-height: 180px;
+  }
+}
 
-      .timeline-item::before {
-        left: 5px;
-      }
-
-      .timeline-item img {
-        max-height: 180px;
-      }
-    }
-
-    footer {
-      background-color: var(--modra);
-      color: var(--biela);
-      text-align: center;
-      padding: 1.5rem;
-    }
-  </style>
+/* ================= FOOTER ================= */
+footer {
+  background: var(--modra);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png" class="logo" alt="SPŠ Trnava">
+  <img src="logo.png" class="logo">
   <div class="header-right">
     <button class="theme-toggle" id="themeToggle">🌙</button>
     <div class="menu-toggle" id="menuToggle">
@@ -304,46 +284,64 @@
 </header>
 
 <nav id="mainNav">
-  <a href="index.html">Domov</a>
-  <a href="historia.html">História</a>
-  <a href="riaditelia.html">Riaditelia</a>
-  <a href="studenti.html">Študenti</a>
-  <a href="kontakt.html">Kontakt</a>
+  <a href="#">Domov</a>
+  <a href="#">História</a>
+  <a href="#">Kontakt</a>
 </nav>
 
 <section class="hero">
   <h1>História SPŠ Technickej v Trnave</h1>
-  <p>Viac než sedem desaťročí kvality, tradície a technického majstrovstva.</p>
+  <p>Viac než sedem desaťročí kvality a technického vzdelávania.</p>
 </section>
 
 <section class="section">
-  <h2>O škole</h2>
-  <p>Stredná priemyselná škola technická v Trnave patrí medzi rešpektované technické školy na Slovensku...</p>
+  <h2>Časová os</h2>
+  <div class="timeline">
+
+    <div class="timeline-item left">
+      <h3>1951 – Založenie</h3>
+      <p>Založenie školy.</p>
+      <img src="historia1951.jpg">
+    </div>
+
+    <div class="timeline-item right">
+      <h3>1975 – Modernizácia</h3>
+      <p>Rozvoj dielní.</p>
+      <img src="historia1975.jpg">
+    </div>
+
+    <div class="timeline-item left">
+      <h3>2025 – Súčasnosť</h3>
+      <p>Moderná technická škola.</p>
+      <img src="historia2025.jpg">
+    </div>
+
+  </div>
 </section>
 
 <footer>
-  <p>© 2025 SPŠ Technická Trnava</p>
+  © 2025 SPŠ Technická Trnava
 </footer>
 
 <script>
-  const toggleTheme = document.getElementById('themeToggle');
-  const menuToggle = document.getElementById('menuToggle');
-  const nav = document.getElementById('mainNav');
-  const header = document.querySelector('header');
+const menu = document.getElementById("menuToggle");
+const nav = document.getElementById("mainNav");
+const header = document.querySelector("header");
 
-  toggleTheme.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
+menu.onclick = () => {
+  menu.classList.toggle("active");
+  nav.classList.toggle("show");
+  nav.style.top = header.offsetHeight + "px";
+};
 
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('show');
-    menuToggle.classList.toggle('active');
-    nav.style.top = header.offsetHeight + 'px';
-  });
+document.getElementById("themeToggle").onclick = () => {
+  document.body.classList.toggle("dark-mode");
+};
 </script>
 
 </body>
 </html>
+
 
 
 
