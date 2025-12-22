@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SPŠ Technická Trnava – Študenti podľa roku/ročníka</title>
+  <meta name="description" content="Prehľad študentov podľa školského roku a ročníka." />
+  <style>
+    :root { --modra:#0c2f96; --zlta:#ceed2f; --biela:#ffffff; --pozadie:var(--biela); --text:#0c2f96; --surface:#f6f8fb; --shadow:0 2px 10px rgba(0,0,0,.08); --radius:12px; --trans:220ms ease; }
+    .dark-mode { --modra:#b5c8ff; --zlta:#f0f169; --biela:#1e1e1e; --pozadie:#121212; --text:#e2e2e2; --surface:#16181d; --shadow:0 8px 24px rgba(0,0,0,.45); }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Segoe UI,system-ui,Arial,sans-serif;background:var(--pozadie);color:var(--text);transition:background-color .3s,color .3s}
+    header{position:sticky;top:0;z-index:10;background:var(--biela);box-shadow:var(--shadow)}
+    .head-inner{max-width:1100px;margin:0 auto;padding:1rem;display:flex;align-items:center;gap:1rem;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:inherit}
+    .logo{height:125px;width:auto;object-fit:contain;background:#5e8fd8;padding:6px 10px;border-radius:10px}
+    .title{margin:0}
+    .badge{display:inline-block;margin-left:.5rem;background:var(--modra);color:#fff;padding:.2rem .5rem;border-radius:999px;font-size:.8rem}
+    .theme-toggle{border:2px solid var(--zlta);background:transparent;border-radius:999px;width:42px;height:42px;cursor:pointer}
+    .dark-mode .theme-toggle{background:var(--zlta);color:#1e1e1e}
+    .toolbar{max-width:1100px;margin:1rem auto 0;padding:0 1rem 1rem;display:grid;gap:.75rem;grid-template-columns:1fr 1fr 1fr}
+    .toolbar input,.toolbar select{width:100%;padding:.7rem .8rem;border-radius:10px;border:1px solid rgba(0,0,0,.15);background:var(--biela);color:inherit}
+    .dark-mode .toolbar input,.dark-mode .toolbar select{border-color:rgba(255,255,255,.2);background:#1e1e1e}
+    .crumbs{max-width:1100px;margin:0 auto;padding:0 1rem .5rem;font-size:.9rem;opacity:.85}
+    .container{max-width:1100px;margin:0 auto;padding:0 1rem 2rem}
+    .class-section{margin:1rem 0 1.25rem;background:var(--biela);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .class-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.9rem 1rem;border-bottom:1px solid rgba(0,0,0,.08);cursor:pointer}
+    .class-title{font-weight:800}
+    .teacher{font-size:.92rem;opacity:.9}
+    .count{opacity:.7;font-size:.9rem;margin-left:auto}
+    .grid{padding:1rem;display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+    .card{background:var(--surface);border-radius:10px;padding:.75rem .9rem;box-shadow:var(--shadow)}
+    .card h3{margin:.25rem 0 .25rem;font-size:1.02rem}
+    .meta{font-size:.92rem;opacity:.85}
+    footer{background:var(--modra);color:#fff;text-align:center;padding:1rem}
+    .dark-mode footer{background:#0c0c0c;color:#f0f169}
+    @media (max-width:900px){ .toolbar{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="head-inner">
+      <a class="brand" href="studenti.html">
+        <img src="logo.png" alt="Logo SPŠ Trnava" class="logo">
+        <h1 class="title">Študenti <span id="badgeRok" class="badge"></span><span id="badgeRocnik" class="badge" style="display:none"></span></h1>
+      </a>
+      <button id="themeToggle" class="theme-toggle" aria-pressed="false" aria-label="Prepnúť vzhľad">🌙</button>
+    </div>
+  </header>
+
+  <nav class="crumbs" aria-label="Drobková navigácia">
+    <a href="studenti.html">Študenti – roky</a>
+    <span id="crumbSep" style="display:none"> / </span>
+    <span id="crumbRok"></span>
+  </nav>
+
+  <section class="toolbar" aria-label="Filtre a vyhľadávanie">
+    <input id="q" type="search" placeholder="Hľadať meno…" aria-label="Vyhľadávanie">
+    <select id="filterClass" aria-label="Filter podľa triedy"><option value="">Všetky triedy</option></select>
+    <select id="sort" aria-label="Zoradenie"><option value="meno">Meno A→Z</option><option value="trieda">Trieda</option></select>
+  </section>
+
+  <div class="container">
+    <div id="classes"></div>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> SPŠ Technická Trnava</p>
+  </footer>
+
+  <script>
+    const $ = (s, r=document) => r.querySelector(s);
+    const params = new URLSearchParams(location.search);
+
+    // ===== Téma =====
+    (function(){
+      const themeToggle = $('#themeToggle');
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') { document.body.classList.add('dark-mode'); themeToggle.textContent='🌞'; themeToggle.setAttribute('aria-pressed','true'); }
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark-mode');
+        themeToggle.textContent = isDark ? '🌞' : '🌙';
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    })();
+
+    // ===== Rok & ročník z URL =====
+    const rok = params.get('rok') || '2012-13';
+    const rocnik = params.get('rocnik'); // 1..4
+
+    $('#badgeRok').textContent = rok;
+    if (rocnik) { const b = $('#badgeRocnik'); b.textContent = rocnik + '. ročník'; b.style.display = 'inline-block'; $('#crumbSep').style.display='inline'; }
+    $('#crumbRok').textContent = rok;
+
+    // ===== Pomocné =====
+    const romanToRocnik = (trieda='') => {
+      const t = String(trieda).trim().toUpperCase();
+      if (t.startsWith('I.')) return 1;
+      if (t.startsWith('II.')) return 2;
+      if (t.startsWith('III.')) return 3;
+      if (t.startsWith('IV.')) return 4;
+      return null;
+    };
+
+    const classesRoot = $('#classes');
+    const q = $('#q');
+    const filterClass = $('#filterClass');
+    const sortSel = $('#sort');
+
+    function cardTpl(s){
+      return `<article class="card" tabindex="0">
+        <h3>${(s.meno||'').replace(/</g,'&lt;')}</h3>
+        <div class="meta">Trieda: ${s.trieda||'—'}</div>
+        ${s.odbor ? `<div class=meta>Odbor: ${s.odbor}</div>`:''}
+      </article>`;
+    }
+
+    function toggle(sec, grid, head){
+      const open = head.getAttribute('aria-expanded') === 'true';
+      head.setAttribute('aria-expanded', String(!open));
+      grid.style.display = open ? 'none' : 'grid';
+    }
+
+    function rebuildClassFilter(grouped){
+      const classes = Object.keys(grouped).sort((a,b)=>a.localeCompare(b,'sk'));
+      filterClass.innerHTML = '<option value="">Všetky triedy</option>' + classes.map(c=>`<option value="${c}">${c}</option>`).join('');
+    }
+
+    function getListAndTeacher(clsData){
+      // Podpora starého formátu (pole) aj nového V2 (objekt s "studenti" a "triedny_ucitel")
+      if (Array.isArray(clsData)) return { list: clsData, teacher: '' };
+      if (clsData && typeof clsData === 'object') {
+        return { list: clsData.studenti || [], teacher: clsData.triedny_ucitel || '' };
+      }
+      return { list: [], teacher: '' };
+    }
+
+    function render(grouped){
+      const term = q.value.trim().toLowerCase();
+      const onlyClass = filterClass.value;
+      const sorter = sortSel.value;
+      classesRoot.innerHTML = '';
+
+      let entries = Object.entries(grouped);
+      if (onlyClass) entries = entries.filter(([k]) => k === onlyClass);
+      entries.sort(([a],[b])=>a.localeCompare(b,'sk'));
+
+      for (const [cls, clsData] of entries){
+        let { list, teacher } = getListAndTeacher(clsData);
+        if (rocnik) list = list.filter(s => romanToRocnik(s.trieda) == Number(rocnik));
+        if (term) list = list.filter(s => `${s.meno||''}`.toLowerCase().includes(term));
+        list = [...list].sort((a,b)=> (sorter==='trieda' ? String(a.trieda).localeCompare(String(b.trieda),'sk') : String(a.meno).localeCompare(String(b.meno),'sk')));
+        if (!list.length) continue;
+
+        const sec = document.createElement('section');
+        sec.className = 'class-section';
+        sec.innerHTML = `
+          <div class="class-head" role="button" aria-expanded="true" tabindex="0">
+            <div class="class-title">Trieda ${cls}</div>
+            ${teacher ? `<div class="teacher">Triedny učiteľ: <strong>${teacher.replace(/</g,'&lt;')}</strong></div>` : ''}
+            <div class="count">${list.length}</div>
+          </div>
+          <div class="grid"></div>`;
+        const grid = sec.querySelector('.grid');
+        grid.innerHTML = list.map(cardTpl).join('');
+
+        const head = sec.querySelector('.class-head');
+        head.addEventListener('click', ()=> toggle(sec, grid, head));
+        head.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') {e.preventDefault(); toggle(sec, grid, head);} });
+
+        classesRoot.appendChild(sec);
+      }
+    }
+
+    function toGrouped(data){
+      // Ak je pole (flat), skonvertujeme na group podľa triedy
+      if (Array.isArray(data)){
+        const g = {};
+        for (const s of data){ const cls = String(s.trieda||'').trim() || '—'; (g[cls] ||= []).push(s); }
+        return g;
+      }
+      // Ak je objekt tried { trieda: pole | objekt v2 }
+      return data || {};
+    }
+
+    async function loadYear(){
+      const base = `data/${rok.replace('/', '-')}`;
+      const candidates = [`${base}/studenti_by_trieda.json`, `${base}/studenti.json`];
+      let json = null;
+      for (const url of candidates){
+        try { const res = await fetch(url, {cache:'no-store'}); if (res.ok){ json = await res.json(); break; } } catch(_){}
+      }
+      if (!json) { classesRoot.innerHTML = `<p>Nepodarilo sa načítať dáta pre rok <strong>${rok}</strong>. Skontrolujte cestu <code>${base}/studenti*.json</code>.</p>`; return; }
+
+      // Ak je v JSONe ročník → triedy (napr. { "I.": { "I.T": {...} } }), rozbalíme podľa ročníka do "grouped"
+      let grouped;
+      const firstVal = json && typeof json === 'object' ? Object.values(json)[0] : null;
+      const looksLikeRocnik = firstVal && typeof firstVal === 'object' && !Array.isArray(firstVal) && (Object.values(firstVal).length>0);
+      if (looksLikeRocnik) {
+        grouped = {};
+        const addFrom = (obj) => { for (const [cls, val] of Object.entries(obj)) grouped[cls] = val; };
+        if (rocnik) {
+          const romanMap = {1:'I.',2:'II.',3:'III.',4:'IV.'};
+          const key = Object.keys(json).find(k=>k.startsWith(romanMap[Number(rocnik)]));
+          if (key && json[key]) addFrom(json[key]);
+        } else {
+          for (const part of Object.values(json)) addFrom(part);
+        }
+      } else {
+        grouped = toGrouped(json);
+      }
+
+      rebuildClassFilter(grouped);
+      const rerender = ()=> render(grouped);
+      q.addEventListener('input', rerender);
+      filterClass.addEventListener('change', rerender);
+      sortSel.addEventListener('change', rerender);
+      rerender();
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    loadYear();
+  </script>
+</body>
+</html>

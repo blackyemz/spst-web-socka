@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>História SPŠ Technická Trnava</title>
+  <style>
+    :root {
+      --modra: #0c2f96;
+      --zlta: #ceed2f;
+      --biela: #acbfbd;
+      --pozadie: var(--biela);
+      --text: #0c2f96;
+    }
+
+    .dark-mode {
+      --modra: #b5c8ff;
+      --zlta: #f0f169;
+      --biela: #1e1e1e;
+      --pozadie: #121212;
+      --text: #e2e2e2;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: var(--pozadie);
+      color: var(--text);
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--biela);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: background-color 0.4s;
+    }
+
+    .dark-mode header { background-color: #2a2a2a; }
+
+    .logo {
+      height: 125px;
+      object-fit: contain;
+      background-color: #5e8fd8;
+      padding: 6px 10px;
+      border-radius: 10px;
+    }
+
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+
+    .menu-toggle {
+      display: flex; flex-direction: column; justify-content: space-between;
+      width: 28px; height: 20px; cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block; height: 3px; width: 100%; background-color: var(--modra);
+      border-radius: 3px; transition: all 0.3s ease;
+    }
+
+    .dark-mode .menu-toggle span { background-color: var(--zlta); }
+
+    .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    nav {
+      display: none; justify-content: center; flex-wrap: wrap; gap: 2rem;
+      background-color: var(--biela); padding: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.3s ease; position: relative; z-index: 99;
+    }
+
+    nav.show {
+      display: flex; animation: fadeIn 0.3s ease;
+      position: fixed; left: 0; width: 100%; z-index: 999;
+    }
+
+    @keyframes fadeIn { from {opacity: 0; transform: translateY(-5px);} to {opacity: 1; transform: translateY(0);} }
+
+    nav a {
+      text-decoration: none; color: var(--modra); font-weight: 600;
+      position: relative; transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: ""; position: absolute; left: 0; bottom: -3px;
+      width: 0%; height: 3px; background-color: var(--zlta);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    .dark-mode nav { background-color: #1e1e1e; }
+    .dark-mode nav a { color: var(--zlta); }
+
+    .theme-toggle {
+      background: none; border: 2px solid var(--zlta);
+      color: var(--modra); font-size: 1.2rem;
+      border-radius: 50%; width: 40px; height: 40px;
+      cursor: pointer; transition: all 0.3s ease;
+    }
+
+    .dark-mode .theme-toggle { background-color: var(--zlta); color: #1e1e1e; }
+
+    .hero {
+      background: linear-gradient(rgba(0,74,173,0.6), rgba(0,74,173,0.6)), url('historia.jpg') center/cover no-repeat;
+      color: var(--biela); text-align: center; padding: 8rem 2rem;
+    }
+
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; font-family: Georgia, serif; }
+    .hero p { color: var(--zlta); font-size: 1.2rem; max-width: 600px; margin: auto; }
+
+    .section { max-width: 1000px; margin: auto; padding: 3rem 2rem; line-height: 1.8; }
+    .section h2 { color: var(--modra); border-left: 5px solid var(--zlta); padding-left: 10px; }
+    .dark-mode .section h2 { color: var(--zlta); }
+    .section p { margin: 1rem 0; text-align: justify; }
+
+    /* ==== TIMELINE ==== */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: var(--modra);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    .dark-mode .timeline::after { background-color: var(--zlta); }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 2rem 3rem;
+      margin-bottom: 5rem;
+      z-index: 1;
+      background-color: var(--pozadie);
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .timeline-item.left { left: 0; text-align: right; transform: translateX(-30px); }
+    .timeline-item.right { left: 50%; transform: translateX(30px); }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: var(--zlta);
+      border: 3px solid var(--modra);
+      top: 20px;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    .timeline-item.left::before { right: -10px; }
+    .timeline-item.right::before { left: -10px; }
+
+    .timeline-item h3 { margin-top: 0; color: var(--modra); }
+    .dark-mode .timeline-item h3 { color: var(--zlta); }
+
+    .timeline-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 0.7rem;
+      max-height: 250px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .timeline-item p { margin: 1rem 0 0 0; line-height: 1.6; text-align: justify; }
+
+    .dark-mode .timeline-item { background-color: #1e1e1e; box-shadow: 0 3px 8px rgba(255,255,255,0.05); }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after { left: 20px; }
+      .timeline-item { width: 100%; text-align: left; left: 0; transform: none; padding-left: 3rem; }
+      .timeline-item::before { left: 5px; }
+    }
+
+    footer {
+      background-color: var(--modra);
+      color: var(--biela);
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .dark-mode footer { background-color: #0c0c0c; color: var(--zlta); }
+    footer a { color: var(--zlta); text-decoration: none; margin: 0 0.5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo SPŠ Trnava" class="logo">
+  <div class="header-right">
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<nav id="mainNav">
+  <a href="index.html">Domov</a>
+  <a href="historia.html">História</a>
+  <a href="riaditelia.html">Riaditelia</a>
+  <a href="studenti.html">Študenti</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+
+<section class="hero">
+  <h1>História SPŠ Technickej v Trnave</h1>
+  <p>Viac než sedem desaťročí kvality, tradície a technického majstrovstva. SPŠ Technická Trnava – miesto, kde sa spája odbornosť, inovácie a úspech.</p>
+</section>
+
+<section class="section">
+  <h2>O škole</h2>
+  <p>Stredná priemyselná škola technická v Trnave patrí medzi rešpektované technické školy na Slovensku. Už od svojho založenia sa zameriava na kvalitnú výučbu v oblasti strojárstva, elektrotechniky a mechatroniky. Dlhé roky je centrom odborného vzdelávania pre celý región, kde sa spája tradícia, prax a moderné technológie.</p>
+  <p>V súčasnosti škola ponúka moderné odbory s dôrazom na technickú prax, inovatívne myslenie a individulny prístup ku študentom. Absolventi SPŠ Technickej Trnava sú úspešní v priemysle, vývoji aj na vysokých technických školách.</p>
+</section>
+
+<section class="section">
+  <h2>Časová os histórie</h2>
+  <div class="timeline">
+    <div class="timeline-item left">
+      <h3>1951 – Založenie školy</h3>
+      <p>Vznik Vyššej priemyselnej školy strojníckej v Trnave položil základy technického vzdelávania v regióne.</p>
+      <img src="historia1951.jpg" alt="Založenie školy 1951">
+    </div>
+    <div class="timeline-item right">
+      <h3>1960 – Rozvoj odborov</h3>
+      <p>Škola rozširuje odbory o železničnú dopravu, konštrukcie a údržbu zariadení.</p>
+      <img src="historia1960.jpg" alt="Rozvoj odborov 1960">
+    </div>
+    <div class="timeline-item left">
+      <h3>1975 – Modernizácia</h3>
+      <p>V 70. rokoch prichádza modernizácia dielní, laboratórií a zavádzanie počítačovej techniky.</p>
+      <img src="historia1975.jpg" alt="Modernizácia 1975">
+    </div>
+    <div class="timeline-item right">
+      <h3>1998 – Nový názov a smerovanie</h3>
+      <p>Škola sa mení na <strong>SPŠ Technickú</strong>. Do popredia sa dostáva elektrotechnika, automatizácia a mechatronika.</p>
+      <img src="historia1998.jpg" alt="Premenovanie školy 1998">
+    </div>
+    <div class="timeline-item left">
+      <h3>2005 – Digitalizácia výučby</h3>
+      <p>Zavedenie CAD systémov, 3D modelovania a programovania prináša nový štandard technického vzdelávania.</p>
+      <img src="historia2005.jpg" alt="Digitalizácia 2005">
+    </div>
+    <div class="timeline-item right">
+      <h3>2015 – Spolupráca s priemyslom</h3>
+      <p>Partnerstvá s firmami ako PSA, ZF, Boge a Schaeffler dávajú študentom reálnu prax a skúsenosti.</p>
+      <img src="historia2015.jpg" alt="Spolupráca s priemyslom 2015">
+    </div>
+    <div class="timeline-item left">
+      <h3>2025 – Škola pre budúcnosť</h3>
+      <p>Dnes patrí SPŠ Technická Trnava medzi popredné technické školy na Slovensku. Ponúka kvalitné vzdelanie, moderné laboratóriá a úspešných absolventov, ktorí sú žiadaní v praxi aj na vysokých školách.</p>
+      <img src="historia2025.jpg" alt="Škola budúcnosti 2025">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Naša škola dnes</h2>
+  <p>SPŠ Technická Trnava je modernou a dynamickou školou, ktorá si zachováva tradíciu a hodnoty technického vzdelávania. Spája kvalitnú teoretickú výučbu s praxou, využíva moderné technológie a podporuje technickú kreativitu študentov. Dôraz na odbornosť, inovácie a individuálny prístup robí z tejto školy jedno z najrešpektovanejších miest pre štúdium techniky na Slovensku.</p>
+</section>
+
+<footer>
+  <p>© 2025 SPŠ Technická Trnava | 
+    <a href="kontakt.html">Kontakt</a> | 
+    <a href="https://www.facebook.com/spsTrnava" target="_blank">Facebook</a>
+  </p>
+</footer>
+
+<script>
+  const toggleTheme = document.getElementById('themeToggle');
+  const menuToggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('mainNav');
+  const links = nav.querySelectorAll('a');
+  const header = document.querySelector('header');
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleTheme.textContent = '🌞';
+  }
+
+  toggleTheme.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    toggleTheme.textContent = isDark ? '🌞' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    menuToggle.classList.toggle('active');
+    if (nav.classList.contains('show')) {
+      const headerHeight = header.offsetHeight;
+      nav.style.top = `${headerHeight}px`;
+    } else {
+      nav.style.top = '';
+    }
+  });
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('show');
+      menuToggle.classList.remove('active');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      nav.classList.remove('show');
+      menuToggle.classList.remove('active');
+    }
+  });
+</script>
+
+</body>
+</html>
