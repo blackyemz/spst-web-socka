@@ -189,9 +189,25 @@
     .dark-mode .timeline-item { background-color: #1e1e1e; box-shadow: 0 3px 8px rgba(255,255,255,0.05); }
 
     @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+        gap: 1rem;
+      }
+
       .timeline::after { left: 20px; }
-      .timeline-item { width: 100%; text-align: left; left: 0; transform: none; padding-left: 3rem; }
-      .timeline-item::before { left: 5px; }
+
+      .timeline-item {
+        width: 100%;
+        text-align: left;
+        left: 0;
+        transform: none;
+        padding-left: 2.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .timeline-item::before { left: 0; top: 0; }
     }
 
     footer {
@@ -338,3 +354,4 @@
 
 </body>
 </html>
+
