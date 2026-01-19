@@ -4,96 +4,208 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SPŠ Technická Trnava – Študenti</title>
-  <meta name="description" content="Rozcestník študentov podľa školských rokov a ročníkov (2012/13 – 2025/26)." />
   <style>
-    :root {
-      --modra: #0c2f96;
-      --zlta: #ceed2f;
-      --biela: #acbfbd;
-      --pozadie: var(--biela);
-      --text: #0c2f96;
+    /* --- 1. ZÁKLADNÉ PREMENNÉ --- */
+    :root { 
+      --modra: #0c2f96; 
+      --zlta: #ceed2f; 
+      --biela: #acbfbd; 
+      --pozadie: #f4f4f4; 
+      --karta-bg: #ffffff; 
+      --text: #0c2f96; 
+      --border: #ddd; 
+    }
+    
+    .dark-mode { 
+      --modra: #b5c8ff; 
+      --zlta: #f0f169; 
+      --biela: #1e1e1e; 
+      --pozadie: #121212; 
+      --karta-bg: #1e1e1e; 
+      --text: #e2e2e2; 
+      --border: #333; 
     }
 
-    .dark-mode {
-      --modra: #b5c8ff;
-      --zlta: #f0f169;
-      --biela: #1e1e1e;
-      --pozadie: #121212;
-      --text: #e2e2e2;
+    body { 
+      margin: 0; 
+      font-family: 'Segoe UI', Tahoma, sans-serif; 
+      background-color: var(--pozadie); 
+      color: var(--text); 
+      transition: background-color 0.4s, color 0.4s; 
     }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background-color: var(--pozadie);
-      color: var(--text);
-      transition: background-color 0.4s, color 0.4s;
-    }
-
+    /* --- 2. HLAVIČKA --- */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      background-color: var(--biela);
+      padding: 0.5rem 2rem;
+      background-color: var(--karta-bg);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
-      z-index: 100;
-      transition: background-color 0.4s;
+      z-index: 1000;
+      min-height: 80px;
     }
 
-    .dark-mode header { background-color: #2a2a2a; }
-
-    .logo {
-      height: 125px;
-      object-fit: contain;
-      background-color: #5e8fd8;
-      padding: 6px 10px;
-      border-radius: 10px;
+    .logo { 
+      height: 100px; 
+      width: auto;
+      object-fit: contain; 
+      background-color: #5e8fd8; 
+      padding: 5px 10px; 
+      border-radius: 8px; 
+      display: block;
     }
 
-    .header-right { display: flex; align-items: center; gap: 1rem; }
-
-    .menu-toggle { display: flex; flex-direction: column; justify-content: space-between; width: 28px; height: 20px; cursor: pointer; }
-    .menu-toggle span { display: block; height: 3px; width: 100%; background-color: var(--modra); border-radius: 3px; transition: all 0.3s ease; }
+    .header-right { 
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    /* --- 3. HAMBURGER MENU --- */
+    .menu-toggle { 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: space-between; 
+      width: 32px; 
+      height: 24px; 
+      cursor: pointer; 
+      z-index: 1001; 
+    }
+    
+    .menu-toggle span { 
+      display: block; 
+      height: 3px; 
+      width: 100%; 
+      background-color: var(--modra); 
+      border-radius: 3px; 
+      transition: 0.3s; 
+    }
     .dark-mode .menu-toggle span { background-color: var(--zlta); }
-    .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    
+    .menu-toggle.active span:nth-child(1) { transform: translateY(10.5px) rotate(45deg); }
     .menu-toggle.active span:nth-child(2) { opacity: 0; }
-    .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .menu-toggle.active span:nth-child(3) { transform: translateY(-10.5px) rotate(-45deg); }
 
-    nav { display: none; justify-content: center; flex-wrap: wrap; gap: 2rem; background-color: var(--biela); padding: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease; position: relative; z-index: 99; }
-    nav.show { display: flex; animation: fadeIn 0.3s ease; position: fixed; left: 0; width: 100%; z-index: 999; }
-    @keyframes fadeIn { from {opacity: 0; transform: translateY(-5px);} to {opacity: 1; transform: translateY(0);} }
-
-    nav a { text-decoration: none; color: var(--modra); font-weight: 600; position: relative; transition: color 0.3s ease; }
-    nav a::after { content: ""; position: absolute; left: 0; bottom: -3px; width: 0%; height: 3px; background-color: var(--zlta); transition: width 0.3s ease; }
+    /* --- 4. NAVIGÁCIA --- */
+    nav { 
+      display: none; 
+      flex-direction: row; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      background-color: var(--karta-bg); 
+      padding: 1.5rem; 
+      width: 100%; 
+      position: fixed; 
+      left: 0; 
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1); 
+      z-index: 999; 
+      gap: 1.5rem; 
+      box-sizing: border-box; 
+    }
+    
+    nav.show { display: flex; animation: slideDown 0.3s ease-out; }
+    
+    @keyframes slideDown { 
+      from { opacity: 0; transform: translateY(-10px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+    
+    nav a { 
+      text-decoration: none; 
+      color: var(--modra); 
+      font-weight: 600; 
+      font-size: 1.1rem; 
+      padding: 5px 10px;
+      position: relative;
+    }
+    
+    nav a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px; background-color: var(--zlta); transition: width 0.3s ease; }
     nav a:hover::after { width: 100%; }
-    .dark-mode nav { background-color: #1e1e1e; }
     .dark-mode nav a { color: var(--zlta); }
-
-    .theme-toggle { background: none; border: 2px solid var(--zlta); color: var(--modra); font-size: 1.2rem; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; transition: all 0.3s ease; }
+    
+    /* --- 5. TLAČIDLO TÉMY --- */
+    .theme-toggle { 
+      background: none; 
+      border: 2px solid var(--zlta); 
+      color: var(--modra); 
+      font-size: 1.2rem; 
+      border-radius: 50%; 
+      width: 40px; 
+      height: 40px; 
+      cursor: pointer; 
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+    }
     .dark-mode .theme-toggle { background-color: var(--zlta); color: #1e1e1e; }
 
+    /* --- 6. OBSAH --- */
     main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem 2rem; }
-    .intro { margin-bottom: 1rem; opacity: .9; }
-    .year { border-bottom: 3px solid var(--modra); padding-bottom: .25rem; margin-top: 2rem; }
-    ul { list-style: none; padding-left: 0; margin: .6rem 0 1.2rem; }
-    li { margin: .3rem 0; }
-    a { color: var(--modra); text-decoration: none; font-weight: 600; }
-    a:hover { text-decoration: underline; color: var(--zlta); }
+    
+    .year-selector { 
+      text-align: center; 
+      margin-bottom: 2rem; 
+      background: var(--karta-bg); 
+      padding: 1.5rem; 
+      border-radius: 8px; 
+      border: 1px solid var(--border); 
+    }
+    
+    .year-selector select { 
+      padding: 10px 20px; 
+      font-size: 1.1rem; 
+      border: 2px solid var(--modra); 
+      border-radius: 5px; 
+      cursor: pointer; 
+      background-color: var(--pozadie);
+      color: var(--text);
+    }
 
-    footer { background-color: var(--modra); color: var(--biela); text-align: center; padding: 1.5rem; margin-top: 2rem; transition: 0.4s; }
+    .grade-section { margin-bottom: 3rem; }
+    .grade-title { border-bottom: 3px solid var(--modra); padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 2rem; color: var(--modra); }
+    .dark-mode .grade-title { color: var(--zlta); border-color: var(--zlta); }
+
+    .class-container { background-color: var(--karta-bg); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid var(--border); }
+    .class-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .class-name { font-size: 1.5rem; margin: 0; color: var(--modra); }
+    .dark-mode .class-name { color: var(--zlta); }
+    .class-teacher { font-style: italic; margin-top: 5px; }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 10px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background-color: rgba(0,0,0,0.05); }
+    .dark-mode th { background-color: rgba(255,255,255,0.05); }
+    
+    .error-box { background-color: #ffe6e6; color: #d8000c; border: 1px solid #d8000c; padding: 15px; border-radius: 5px; margin: 20px 0; text-align: center; }
+    
+    footer { background-color: var(--modra); color: #fff; text-align: center; padding: 1.5rem; margin-top: 2rem; }
     .dark-mode footer { background-color: #0c0c0c; color: var(--zlta); }
-    footer a { color: var(--zlta); text-decoration: none; margin: 0 0.5rem; }
+    
+    @media (max-width: 600px) {
+      .logo { height: 80px; }
+      .header-right { gap: 10px; }
+      .class-header { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <a href="index.html"><img src="logo.png" alt="Logo SPŠ Trnava" class="logo"></a>
+    <a href="index.html">
+      <img src="logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+    </a>
+
     <div class="header-right">
-      <button class="theme-toggle" id="themeToggle">🌙</button>
-      <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+      <button class="theme-toggle" id="themeToggle" title="Zmeniť tému">🌙</button>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
@@ -102,32 +214,51 @@
     <a href="historia.html">História</a>
     <a href="riaditelia.html">Riaditelia</a>
     <a href="studenti.html">Študenti</a>
-    <a href="galeria.html">Galéria</a>
     <a href="kontakt.html">Kontakt</a>
   </nav>
 
   <main>
-    <h1>Študenti</h1>
-    <p class="intro">Žiaci podľa rokov</p>
-    <div id="years"></div>
+    <h1 style="text-align: center;">Zoznam študentov</h1>
+
+    <div class="year-selector">
+      <label for="yearSelect"><strong>Vyber školský rok:</strong></label><br><br>
+      <select id="yearSelect">
+        <option value="2012">2012 / 2013</option>
+        <option value="2013">2013 / 2014</option>
+        <option value="2014">2014 / 2015</option>
+        <option value="2015">2015 / 2016</option>
+        <option value="2016">2016 / 2017</option>
+        <option value="2017">2017 / 2018</option>
+        <option value="2018">2018 / 2019</option>
+        <option value="2019">2019 / 2020</option>
+        <option value="2020">2020 / 2021</option>
+        <option value="2021">2021 / 2022</option>
+        <option value="2022">2022 / 2023</option>
+        <option value="2023">2023 / 2024</option>
+        <option value="2024">2024 / 2025</option>
+        <option value="2025">2025 / 2026</option>
+      </select>
+    </div>
+
+    <div id="error-container"></div>
+    <div id="student-content"></div>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> SPŠ Technická Trnava |
-      <a href="kontakt.html">Kontakt</a> |
-      <a href="https://www.facebook.com/spsTrnava" target="_blank" rel="noopener">Facebook</a>
-    </p>
+    <p>© <span id="year"></span> SPŠ Technická Trnava</p>
   </footer>
 
   <script>
     const toggleTheme = document.getElementById('themeToggle');
     const menuToggle = document.getElementById('menuToggle');
     const nav = document.getElementById('mainNav');
-    const links = nav.querySelectorAll('a');
     const header = document.querySelector('header');
+    const yearSelect = document.getElementById('yearSelect');
+    const contentDiv = document.getElementById('student-content');
+    const errorContainer = document.getElementById('error-container');
 
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+    // Téma
+    if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark-mode');
       toggleTheme.textContent = '🌞';
     }
@@ -138,49 +269,111 @@
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
 
+    // Menu
     menuToggle.addEventListener('click', () => {
       nav.classList.toggle('show');
       menuToggle.classList.toggle('active');
-      if (nav.classList.contains('show')) {
-        const headerHeight = header.offsetHeight;
-        nav.style.top = `${headerHeight}px`;
-      } else { nav.style.top = ''; }
-    });
-
-    links.forEach(link => link.addEventListener('click', () => {
-      nav.classList.remove('show');
-      menuToggle.classList.remove('active');
-    }));
-
-    document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-        nav.classList.remove('show');
-        menuToggle.classList.remove('active');
-      }
+      if (nav.classList.contains('show')) nav.style.top = `${header.offsetHeight}px`;
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // ===== Dynamické roky 2012/13 – 2025/26 bez 'Všetci študenti' =====
-    const wrap = document.getElementById('years');
-    const start = 2012;
-    const end = 2025;
-
-    const fmtSchoolYear = (y) => `${y}-${String(y+1).slice(-2)}`;
-
-    for (let y = start; y <= end; y++) {
-      const sk = fmtSchoolYear(y);
-      const section = document.createElement('section');
-      section.innerHTML = `
-        <h2 class="year">Školský rok ${y}/${String(y+1).slice(-2)}</h2>
-        <ul>
-          <li><a href="studenti_rok.html?rok=${sk}&rocnik=1">1. ročník</a></li>
-          <li><a href="studenti_rok.html?rok=${sk}&rocnik=2">2. ročník</a></li>
-          <li><a href="studenti_rok.html?rok=${sk}&rocnik=3">3. ročník</a></li>
-          <li><a href="studenti_rok.html?rok=${sk}&rocnik=4">4. ročník</a></li>
-        </ul>`;
-      wrap.appendChild(section);
+    function showError(message, detail = "") {
+      console.error(message, detail);
+      errorContainer.innerHTML = `
+        <div class="error-box">
+          <h3>⚠️ Nastala chyba</h3>
+          <p>${message}</p>
+          <small>${detail}</small>
+        </div>
+      `;
+      contentDiv.innerHTML = '';
     }
+
+    function loadDataForYear(year) {
+      errorContainer.innerHTML = ''; 
+      contentDiv.innerHTML = '<p style="text-align:center">Načítavam dáta...</p>';
+      
+      const fileName = `data/${year}.json`;
+
+      fetch(fileName)
+        .then(response => {
+          if (!response.ok) {
+            if (response.status === 404) throw new Error(`Súbor "${fileName}" sa nenašiel.`);
+            throw new Error(`Chyba servera: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          renderData(data);
+        })
+        .catch(error => {
+          if (error.name === "SyntaxError") {
+            showError(`Súbor "${fileName}" má chybu v kóde.`, "Skontroluj čiarky a zátvorky.");
+          } else {
+            showError("Nepodarilo sa načítať dáta.", error.message);
+          }
+        });
+    }
+
+    function renderData(studentData) {
+      contentDiv.innerHTML = '';
+      const rocnikyOrder = ["IV.", "III.", "II.", "I."];
+      let foundData = false;
+
+      rocnikyOrder.forEach(gradeKey => {
+        if (!studentData[gradeKey]) return;
+        foundData = true;
+
+        const section = document.createElement('div');
+        section.className = 'grade-section';
+        const title = document.createElement('h2');
+        title.className = 'grade-title';
+        title.textContent = `${gradeKey.replace('.', '')}. ročník`;
+        section.appendChild(title);
+
+        const classesObj = studentData[gradeKey];
+        Object.keys(classesObj).forEach(classKey => {
+          const classInfo = classesObj[classKey];
+          const classBox = document.createElement('div');
+          classBox.className = 'class-container';
+          
+          classBox.innerHTML = `
+            <div class="class-header">
+              <h3 class="class-name">Trieda ${classKey}</h3>
+              <span class="class-teacher">Triedny: ${classInfo.triedny_ucitel || 'Nezadaný'}</span>
+            </div>
+          `;
+
+          if (classInfo.studenti && classInfo.studenti.length > 0) {
+            const table = document.createElement('table');
+            table.innerHTML = `<thead><tr><th>Priezvisko</th><th>Meno</th></tr></thead>`;
+            const tbody = document.createElement('tbody');
+            
+            classInfo.studenti.sort((a,b) => (a.Priezvisko || "").localeCompare(b.Priezvisko || "", 'sk'))
+              .forEach(s => {
+                tbody.innerHTML += `<tr><td>${s.Priezvisko}</td><td>${s.Meno}</td></tr>`;
+              });
+
+            table.appendChild(tbody);
+            classBox.appendChild(table);
+          } else {
+            classBox.innerHTML += `<p>Žiadni študenti.</p>`;
+          }
+
+          section.appendChild(classBox);
+        });
+        contentDiv.appendChild(section);
+      });
+
+      if (!foundData) {
+        showError("Súbor sa načítal, ale je prázdny alebo má zlé názvy ročníkov.", "");
+      }
+    }
+
+    yearSelect.addEventListener('change', (e) => loadDataForYear(e.target.value));
+    loadDataForYear(yearSelect.value);
+
   </script>
 </body>
 </html>
