@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPŠ Technická Trnava – Riaditelia</title>
+  <style>
+    /* --- ZDIEĽANÉ CSS (Rovnaké ako na ostatných stránkach) --- */
+    :root {
+      --modra: #0c2f96;
+      --zlta: #ceed2f;
+      --biela: #acbfbd;
+      --pozadie: #f4f4f4;
+      --karta-bg: #ffffff;
+      --text: #0c2f96;
+      --border: #ddd;
+    }
+
+    .dark-mode {
+      --modra: #b5c8ff;
+      --zlta: #f0f169;
+      --biela: #1e1e1e;
+      --pozadie: #121212;
+      --karta-bg: #1e1e1e;
+      --text: #e2e2e2;
+      --border: #333;
+    }
+
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--pozadie); color: var(--text); transition: 0.4s; }
+
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background-color: var(--karta-bg); box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    .logo { height: 60px; object-fit: contain; background-color: #5e8fd8; padding: 6px 10px; border-radius: 10px; }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    
+    .menu-toggle { display: flex; flex-direction: column; justify-content: space-between; width: 28px; height: 20px; cursor: pointer; }
+    .menu-toggle span { display: block; height: 3px; width: 100%; background-color: var(--modra); border-radius: 3px; transition: 0.3s; }
+    .dark-mode .menu-toggle span { background-color: var(--zlta); }
+    .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    nav { display: none; justify-content: center; gap: 2rem; background-color: var(--karta-bg); padding: 1rem; width: 100%; position: absolute; left: 0; top: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    nav.show { display: flex; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: var(--modra); font-weight: 600; padding: 0.5rem; }
+    nav a:hover { text-decoration: underline; }
+    .dark-mode nav a { color: var(--zlta); }
+    
+    .theme-toggle { background: none; border: 2px solid var(--zlta); color: var(--modra); font-size: 1.2rem; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; }
+    .dark-mode .theme-toggle { background-color: var(--zlta); color: #1e1e1e; }
+
+    footer { background-color: var(--modra); color: #fff; text-align: center; padding: 1.5rem; margin-top: 2rem; }
+    .dark-mode footer { background-color: #0c0c0c; color: var(--zlta); }
+    footer a { color: var(--zlta); text-decoration: none; margin: 0 0.5rem; }
+
+    main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem 2rem; }
+    h1 { text-align: center; margin-bottom: 2rem; }
+
+    /* --- ŠPECIFICKÉ ŠTÝLY PRE RIADITEĽOV --- */
+    
+    .directors-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .director-card {
+      background-color: var(--karta-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-left: 5px solid var(--modra); /* Modrý pásik naľavo */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.2s ease;
+    }
+
+    .dark-mode .director-card {
+      border-left-color: var(--zlta); /* Žltý pásik v dark mode */
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--zlta);
+    }
+
+    .director-card:hover {
+      transform: translateX(5px);
+    }
+
+    .director-info h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.4rem;
+    }
+
+    .director-years {
+      font-weight: bold;
+      color: var(--modra);
+      font-size: 1.1rem;
+      background: rgba(12, 47, 150, 0.1);
+      padding: 5px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    
+    .dark-mode .director-years {
+      color: var(--zlta);
+      background: rgba(206, 237, 47, 0.15);
+    }
+
+    .current-director {
+      border: 2px solid var(--modra);
+      background: linear-gradient(to right, rgba(12, 47, 150, 0.05), var(--karta-bg));
+    }
+    .dark-mode .current-director {
+      border-color: var(--zlta);
+      background: linear-gradient(to right, rgba(206, 237, 47, 0.05), var(--karta-bg));
+    }
+
+    @media (max-width: 600px) {
+      .director-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .director-years { align-self: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html"><img src="logo.png" alt="Logo SPŠ" class="logo"></a>
+    <div class="header-right">
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <nav id="mainNav">
+    <a href="index.html">Domov</a>
+    <a href="historia.html">História</a>
+    <a href="riaditelia.html" style="text-decoration: underline;">Riaditelia</a> <a href="studenti.html">Študenti</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+
+  <main>
+    <h1>Riaditelia školy</h1>
+    <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto;">
+      Prehľad osobností, ktoré viedli našu priemyslovku od jej vzniku až po súčasnosť.
+    </p>
+
+    <div class="directors-list">
+
+      <div class="director-card current-director">
+        <div class="director-info">
+          <h2>Ing. Ľudovít Šimun</h2>
+          <p>Súčasný riaditeľ školy</p>
+        </div>
+        <div class="director-years">2014 – súčasnosť</div>
+      </div>
+
+      <div class="director-card">
+        <div class="director-info">
+          <h2>Ing. Jozef Kolář</h2>
+          <p>Bývalý riaditeľ</p>
+        </div>
+        <div class="director-years">1991 – 2014</div>
+      </div>
+
+      <div class="director-card">
+        <div class="director-info">
+          <h2>Ing. Meno Priezvisko</h2>
+          <p>Doplň informácie...</p>
+        </div>
+        <div class="director-years">1980 – 1991</div>
+      </div>
+
+      <div class="director-card">
+        <div class="director-info">
+          <h2>Ing. Meno Priezvisko</h2>
+          <p>Doplň informácie...</p>
+        </div>
+        <div class="director-years">1965 – 1980</div>
+      </div>
+
+      </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> SPŠ Technická Trnava | <a href="kontakt.html">Kontakt</a></p>
+  </footer>
+
+  <script>
+    // --- SKRIPT PRE MENU A TÉMU (Rovnaký ako inde) ---
+    const toggleTheme = document.getElementById('themeToggle');
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    const header = document.querySelector('header');
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleTheme.textContent = '🌞';
+    }
+
+    toggleTheme.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      toggleTheme.textContent = isDark ? '🌞' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+      if (nav.classList.contains('show')) nav.style.top = `${header.offsetHeight}px`;
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
