@@ -1,346 +1,313 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>História SPŠ Technická Trnava</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPŠ Technická Trnava – História</title>
+  <meta name="description" content="História školy a časová os Strednej priemyselnej školy technickej v Trnave." />
 
-<style>
-:root {
-  --modra: #0c2f96;
-  --zlta: #ceed2f;
-  --pozadie: #f2f5f5;
-  --text: #0c2f96;
-}
+  <style>
+    /* --- 1. ZÁKLADNÉ PREMENNÉ --- */
+    :root { 
+      --modra: #0c2f96; 
+      --zlta: #ceed2f; 
+      --biela: #acbfbd; 
+      --pozadie: #f4f4f4; 
+      --karta-bg: #ffffff; 
+      --text: #0c2f96; 
+      --border: #ddd; 
+    }
+    
+    .dark-mode { 
+      --modra: #b5c8ff; 
+      --zlta: #f0f169; 
+      --biela: #1e1e1e; 
+      --pozadie: #121212; 
+      --karta-bg: #1e1e1e; 
+      --text: #e2e2e2; 
+      --border: #333; 
+    }
 
-.dark-mode {
-  --pozadie: #121212;
-  --text: #e2e2e2;
-  --modra: #b5c8ff;
-  --zlta: #f0f169;
-}
+    body { 
+      margin: 0; 
+      font-family: 'Segoe UI', Tahoma, sans-serif; 
+      background-color: var(--pozadie); 
+      color: var(--text); 
+      transition: background-color 0.4s, color 0.4s; 
+    }
 
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: var(--pozadie);
-  color: var(--text);
-}
+    /* --- 2. HLAVIČKA --- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 2rem;
+      background-color: var(--karta-bg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      min-height: 80px;
+    }
 
-/* ================= HEADER ================= */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+    .logo { 
+      height: 100px; 
+      width: auto;
+      object-fit: contain; 
+      background-color: #5e8fd8; 
+      padding: 5px 10px; 
+      border-radius: 8px; 
+      display: block;
+    }
 
-.logo {
-  height: 120px;
-  background: #5e8fd8;
-  padding: 6px 10px;
-  border-radius: 10px;
-}
+    .header-right { 
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+    }
 
-.header-right {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
+    /* --- 3. HAMBURGER --- */
+    .menu-toggle { display: flex; flex-direction: column; justify-content: space-between; width: 32px; height: 24px; cursor: pointer; z-index: 1001; }
+    .menu-toggle span { display: block; height: 3px; width: 100%; background-color: var(--modra); border-radius: 3px; transition: 0.3s; }
+    .dark-mode .menu-toggle span { background-color: var(--zlta); }
+    .menu-toggle.active span:nth-child(1) { transform: translateY(10.5px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: translateY(-10.5px) rotate(-45deg); }
 
-.menu-toggle {
-  width: 28px;
-  height: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-}
+    /* --- 4. MENU --- */
+    nav { 
+      display: none; 
+      flex-direction: row; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      background-color: var(--karta-bg); 
+      padding: 1.5rem; 
+      width: 100%; 
+      position: fixed; 
+      left: 0; 
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1); 
+      z-index: 999; 
+      gap: 1.5rem; 
+      box-sizing: border-box;
+    }
+    nav.show { display: flex; animation: slideDown 0.3s ease-out; }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    
+    nav a { text-decoration: none; color: var(--modra); font-weight: 600; font-size: 1.1rem; padding: 5px 10px; position: relative; }
+    nav a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px; background-color: var(--zlta); transition: 0.3s; }
+    nav a:hover::after { width: 100%; }
+    .dark-mode nav a { color: var(--zlta); }
 
-.menu-toggle span {
-  height: 3px;
-  background: var(--modra);
-  border-radius: 3px;
-}
+    .theme-toggle { background: none; border: 2px solid var(--zlta); color: var(--modra); font-size: 1.2rem; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    .dark-mode .theme-toggle { background-color: var(--zlta); color: #1e1e1e; }
 
-.menu-toggle.active span:nth-child(1) {transform: translateY(8px) rotate(45deg);}
-.menu-toggle.active span:nth-child(2) {opacity: 0;}
-.menu-toggle.active span:nth-child(3) {transform: translateY(-8px) rotate(-45deg);}
+    /* --- 5. ŠPECIFICKÉ CSS PRE HISTÓRIU --- */
+    
+    .hero {
+      background: linear-gradient(rgba(12, 47, 150, 0.7), rgba(12, 47, 150, 0.7)), url('historia.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 6rem 1rem;
+      margin-bottom: 2rem;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.2rem; color: var(--zlta); }
 
-.theme-toggle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid var(--zlta);
-  background: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
+    main { max-width: 1000px; margin: 0 auto; padding: 0 1rem 3rem; }
+    
+    .section-title {
+      text-align: center;
+      border-bottom: 3px solid var(--modra);
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 3rem;
+      color: var(--modra);
+    }
+    .dark-mode .section-title { color: var(--zlta); border-color: var(--zlta); }
 
-/* ================= NAV ================= */
-nav {
-  display: none;
-  position: fixed;
-  width: 100%;
-  background: white;
-  left: 0;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-}
+    /* --- ČASOVÁ OS (TIMELINE) --- */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-nav.show { display: flex; }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: var(--modra);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+    .dark-mode .timeline::after { background-color: var(--zlta); }
 
-nav a {
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--modra);
-}
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: transparent;
+      width: 50%;
+      box-sizing: border-box;
+    }
 
-/* ================= HERO ================= */
-.hero {
-  background: linear-gradient(rgba(0,74,173,.6), rgba(0,74,173,.6)),
-              url("historia.jpg") center/cover no-repeat;
-  padding: 7rem 2rem;
-  text-align: center;
-  color: white;
-}
+    .timeline-item.left { left: 0; text-align: right; }
+    .timeline-item.right { left: 50%; text-align: left; }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
+    /* Obsah (Karta bez obrázku) */
+    .timeline-content {
+      padding: 20px;
+      background-color: var(--karta-bg);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 1px solid var(--border);
+      position: relative;
+    }
 
-.hero p {
-  max-width: 600px;
-  margin: auto;
-  color: var(--zlta);
-  font-size: 1.2rem;
-}
+    .timeline-content h3 { margin-top: 0; color: var(--modra); font-size: 1.5rem; }
+    .dark-mode .timeline-content h3 { color: var(--zlta); }
+    
+    .timeline-content p {
+        margin-bottom: 0;
+        line-height: 1.6;
+    }
 
-/* ================= SECTION ================= */
-.section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 3rem 2rem;
-}
+    /* Krúžok na čiare */
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: var(--karta-bg);
+      border: 4px solid var(--zlta);
+      top: 20px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item.right::after { left: -10px; }
 
-.section h2 {
-  border-left: 5px solid var(--zlta);
-  padding-left: 10px;
-}
+    footer { background-color: var(--modra); color: #fff; text-align: center; padding: 1.5rem; margin-top: 2rem; }
+    .dark-mode footer { background-color: #0c0c0c; color: var(--zlta); }
+    footer a { color: var(--zlta); text-decoration: none; margin: 0 0.5rem; }
 
-.section p {
-  line-height: 1.8;
-  text-align: justify;
-}
-
-/* ================= TIMELINE DESKTOP ================= */
-.timeline {
-  max-width: 900px;
-  margin: 4rem auto;
-  position: relative;
-}
-
-.timeline::after {
-  content: "";
-  position: absolute;
-  width: 4px;
-  background: var(--modra);
-  top: 0;
-  bottom: 0;
-  left: 50%;
-}
-
-.timeline-item {
-  width: 50%;
-  padding: 2rem 3rem;
-  background: white;
-  border-radius: 10px;
-  position: relative;
-  margin-bottom: 4rem;
-}
-
-.timeline-item.left {
-  left: 0;
-  text-align: right;
-}
-
-.timeline-item.right {
-  left: 50%;
-}
-
-.timeline-item::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  background: var(--zlta);
-  border: 3px solid var(--modra);
-  border-radius: 50%;
-  position: absolute;
-  top: 20px;
-}
-
-.timeline-item.left::before { right: -10px; }
-.timeline-item.right::before { left: -10px; }
-
-.timeline-item img {
-  width: 100%;
-  margin-top: 1rem;
-  border-radius: 10px;
-  max-height: 250px;
-  object-fit: cover;
-}
-
-/* ================= MOBILE – FINÁLNA OPRAVA ================= */
-@media (max-width: 768px) {
-
-  header {
-    padding: .6rem 1rem;
-  }
-
-  .logo {
-    height: 60px;
-  }
-
-  nav {
-    gap: 1rem;
-  }
-
-  .hero {
-    padding: 3.5rem 1.2rem;
-  }
-
-  .hero h1 {
-    font-size: 1.9rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .section {
-    padding: 2rem 1.2rem;
-  }
-
-  .section p {
-    text-align: left;
-    font-size: .95rem;
-  }
-
-  /* ===== TIMELINE MOBILE FIX ===== */
-  .timeline::after {
-    display: none;
-  }
-
-  .timeline-item {
-    width: 100%;
-    left: 0 !important;
-    transform: none !important;
-    padding: 1.5rem;
-    text-align: left;
-    margin-bottom: 2rem;
-  }
-
-  .timeline-item.left,
-  .timeline-item.right {
-    left: 0;
-  }
-
-  .timeline-item::before {
-    left: 15px;
-    top: -10px;
-  }
-
-  .timeline-item img {
-    max-height: 180px;
-  }
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background: var(--modra);
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-}
-</style>
+    /* --- RESPONZIVITA --- */
+    @media (max-width: 768px) {
+      .logo { height: 80px; }
+      .header-right { gap: 10px; }
+      
+      .timeline::after { left: 31px; }
+      .timeline-item { width: 100%; padding-left: 70px; padding-right: 10px; }
+      .timeline-item.left, .timeline-item.right { left: 0; text-align: left; }
+      .timeline-item.left::after, .timeline-item.right::after { left: 21px; }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" class="logo">
-  <div class="header-right">
-    <button class="theme-toggle" id="themeToggle">🌙</button>
-    <div class="menu-toggle" id="menuToggle">
-      <span></span><span></span><span></span>
+  <header>
+    <a href="index.html">
+      <img src="logo.png" alt="Logo SPŠ Trnava" class="logo" onerror="this.style.display='none'">
+    </a>
+    <div class="header-right">
+      <button class="theme-toggle" id="themeToggle" title="Prepnúť tému">🌙</button>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </div>
     </div>
+  </header>
+
+  <nav id="mainNav">
+    <a href="index.html">Domov</a>
+    <a href="historia.html" style="text-decoration: underline;">História</a>
+    <a href="riaditelia.html">Riaditelia</a>
+    <a href="studenti.html">Študenti</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+
+  <div class="hero">
+    <h1>História školy</h1>
+    <p>Viac než sedem desaťročí kvality a technického vzdelávania</p>
   </div>
-</header>
 
-<nav id="mainNav">
-  <a href="#">Domov</a>
-  <a href="#">História</a>
-  <a href="#">Kontakt</a>
-</nav>
-
-<section class="hero">
-  <h1>História SPŠ Technickej v Trnave</h1>
-  <p>Viac než sedem desaťročí kvality a technického vzdelávania.</p>
-</section>
-
-<section class="section">
-  <h2>Časová os</h2>
-  <div class="timeline">
-
-    <div class="timeline-item left">
-      <h3>1951 – Založenie</h3>
-      <p>Založenie školy.</p>
-      <img src="historia1951.jpg">
+  <main>
+    <div style="text-align: center;">
+      <h2 class="section-title">Časová os</h2>
     </div>
+    
+    <div class="timeline">
 
-    <div class="timeline-item right">
-      <h3>1975 – Modernizácia</h3>
-      <p>Rozvoj dielní.</p>
-      <img src="historia1975.jpg">
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>1951 – Založenie</h3>
+          <p>Založenie školy a začiatok výučby v pôvodných priestoroch.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>1975 – Modernizácia</h3>
+          <p>Rozšírenie školy, výstavba nových dielní a modernizácia vybavenia.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>2025 – Súčasnosť</h3>
+          <p>Moderná technická škola pripravujúca odborníkov pre 21. storočie.</p>
+        </div>
+      </div>
+
     </div>
+  </main>
 
-    <div class="timeline-item left">
-      <h3>2025 – Súčasnosť</h3>
-      <p>Moderná technická škola.</p>
-      <img src="historia2025.jpg">
-    </div>
+  <footer>
+    <p>© <span id="year"></span> SPŠ Technická Trnava</p>
+  </footer>
 
-  </div>
-</section>
+  <script>
+    const toggleTheme = document.getElementById('themeToggle');
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    const header = document.querySelector('header');
 
-<footer>
-  © 2025 SPŠ Technická Trnava
-</footer>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleTheme.textContent = '🌞';
+    }
 
-<script>
-const menu = document.getElementById("menuToggle");
-const nav = document.getElementById("mainNav");
-const header = document.querySelector("header");
+    toggleTheme.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      toggleTheme.textContent = isDark ? '🌞' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
 
-menu.onclick = () => {
-  menu.classList.toggle("active");
-  nav.classList.toggle("show");
-  nav.style.top = header.offsetHeight + "px";
-};
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+      if (nav.classList.contains('show')) {
+        nav.style.top = `${header.offsetHeight}px`;
+      }
+    });
 
-document.getElementById("themeToggle").onclick = () => {
-  document.body.classList.toggle("dark-mode");
-};
-</script>
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !menuToggle.contains(e.target) && nav.classList.contains('show')) {
+        nav.classList.remove('show');
+        menuToggle.classList.remove('active');
+      }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
+
 
 
 
