@@ -1,0 +1,3230 @@
+{
+  "IV.": {
+    "IV.T": {
+      "triedny_ucitel": "Daniela Bakošová",
+      "studenti": [
+        {
+          "Priezvisko": "Wahidová",
+          "Meno": "Dominika",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Vlk",
+          "Meno": "Marián",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Vallová",
+          "Meno": "Simona",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Šušlová",
+          "Meno": "Simona",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Šajbidor",
+          "Meno": "Adam",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Pobjecká",
+          "Meno": "Denisa",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Ondrušková",
+          "Meno": "Estera",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Mokrá",
+          "Meno": "Kristína",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Lenghart",
+          "Meno": "Matúš",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Kurucová",
+          "Meno": "Nikola",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Kočitá",
+          "Meno": "Lucia",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Chovanec",
+          "Meno": "Denis",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Hypíková",
+          "Meno": "Soňa",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Horváth",
+          "Meno": "Adam",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Gabrielová",
+          "Meno": "Natália",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Bučko",
+          "Meno": "Matúš",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Bročková",
+          "Meno": "Veronika",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Brezinová",
+          "Meno": "Veronika",
+          "Trieda": "IV.T"
+        },
+        {
+          "Priezvisko": "Bilková",
+          "Meno": "Vanesa",
+          "Trieda": "IV.T"
+        }
+      ]
+    },
+    "IV.P": {
+      "triedny_ucitel": "Ružena Silná",
+      "studenti": [
+        {
+          "Priezvisko": "Vargová",
+          "Meno": "Michaela",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Tomík",
+          "Meno": "Peter",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Tibenská",
+          "Meno": "Júlia",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Štrbová",
+          "Meno": "Dominika",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Štibraná",
+          "Meno": "Barbora",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Škodová",
+          "Meno": "Lucia",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Sýkorová",
+          "Meno": "Tatiana",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Stovíčková",
+          "Meno": "Lenka",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Slobodová",
+          "Meno": "Mária",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Rezbáriková",
+          "Meno": "Erika",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Petrovičová",
+          "Meno": "Patrícia",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Pavlovičová",
+          "Meno": "Diana",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Nováková",
+          "Meno": "Eva",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Migrová",
+          "Meno": "Martina",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Malychová",
+          "Meno": "Lucia",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Magulová",
+          "Meno": "Pavlína",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Kučavíková",
+          "Meno": "Ivana",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Koleňáková",
+          "Meno": "Stanislava",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Kaššová",
+          "Meno": "Barbora",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Chrenková",
+          "Meno": "Lenka",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Chovanová",
+          "Meno": "Patrícia",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Chladná",
+          "Meno": "Lenka",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Horváthová",
+          "Meno": "Sára",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Hluchová",
+          "Meno": "Sabína",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Gočálová",
+          "Meno": "Timea",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Filka",
+          "Meno": "Michel",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Faktorová",
+          "Meno": "Dominika",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Dulovczová",
+          "Meno": "Izabela",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Doktoríková",
+          "Meno": "Nicolette",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Čonka",
+          "Meno": "Dominik",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Červený",
+          "Meno": "Boris",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Bošácka",
+          "Meno": "Kristína",
+          "Trieda": "IV.P"
+        },
+        {
+          "Priezvisko": "Boledovičová",
+          "Meno": "Dominika",
+          "Trieda": "IV.P"
+        }
+      ]
+    },
+    "IV.MS": {
+      "triedny_ucitel": "Zuzana Murínová",
+      "studenti": [
+        {
+          "Priezvisko": "Žilinský",
+          "Meno": "Boris",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Zubčák",
+          "Meno": "Martin",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Zolvík",
+          "Meno": "Lukáš",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Voštinár",
+          "Meno": "Martin",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Vlk",
+          "Meno": "Matej",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Veselý",
+          "Meno": "Martin",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Šturdík",
+          "Meno": "Dominik",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Špalek",
+          "Meno": "Marek",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Saloň",
+          "Meno": "Roman",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Miklovič",
+          "Meno": "Denis",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Michalec",
+          "Meno": "Rastislav",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Líška",
+          "Meno": "Martin",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Kosmál",
+          "Meno": "Samuel",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Jirka",
+          "Meno": "Erik",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Jamrich",
+          "Meno": "Patrik",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Chudý",
+          "Meno": "Dušan",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Horňák",
+          "Meno": "Tadeáš",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Hornák",
+          "Meno": "Adam",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Holický",
+          "Meno": "Matej",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Hlaď",
+          "Meno": "Andrej",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Hanus",
+          "Meno": "Andrej",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Časár",
+          "Meno": "Marek",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Čapkovič",
+          "Meno": "Martin",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Bulák",
+          "Meno": "Jozef",
+          "Trieda": "IV.MS"
+        },
+        {
+          "Priezvisko": "Barič",
+          "Meno": "Dominik",
+          "Trieda": "IV.MS"
+        }
+      ]
+    },
+    "IV.M": {
+      "triedny_ucitel": "Anna Brestovanská",
+      "studenti": [
+        {
+          "Priezvisko": "Šášik",
+          "Meno": "Daniel",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Sersen",
+          "Meno": "Dávid",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Sárkány",
+          "Meno": "Zoltán",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Remeník",
+          "Meno": "Marián",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Pončák",
+          "Meno": "Radoslav",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Podolská",
+          "Meno": "Jana",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Peško",
+          "Meno": "Ferdinand",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Kubovič",
+          "Meno": "Martin",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Krajňák",
+          "Meno": "Matej",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Kostolanský",
+          "Meno": "Dušan",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Kaufman",
+          "Meno": "Peter",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Juriga",
+          "Meno": "Peter",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Hornáček",
+          "Meno": "Roman",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Heteš",
+          "Meno": "Marek",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Glós",
+          "Meno": "Kristián",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Fabian",
+          "Meno": "Lukáš",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Drábik",
+          "Meno": "Matúš",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Daniš",
+          "Meno": "Stanislav",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Brokuta",
+          "Meno": "Michal Ladislav",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Bohunický",
+          "Meno": "Matúš",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Bínovský",
+          "Meno": "Martin",
+          "Trieda": "IV.M"
+        },
+        {
+          "Priezvisko": "Baričič",
+          "Meno": "Tomáš",
+          "Trieda": "IV.M"
+        }
+      ]
+    },
+    "IV.EB": {
+      "triedny_ucitel": "Zuzana Oravcová",
+      "studenti": [
+        {
+          "Priezvisko": "Vyskoč",
+          "Meno": "Kamil",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Šujdák",
+          "Meno": "Martin",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Šimurda",
+          "Meno": "Martin",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Šandula",
+          "Meno": "Alex",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Suchoň",
+          "Meno": "Matej",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Starko",
+          "Meno": "Mário",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Prvý",
+          "Meno": "Marián",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Polák",
+          "Meno": "Michal",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Polačik",
+          "Meno": "Martin",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Pekarovič",
+          "Meno": "Roman",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Okuliar",
+          "Meno": "Michal",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Nemček",
+          "Meno": "Michal",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Molnár",
+          "Meno": "Jakub",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Miksád",
+          "Meno": "Mário",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Martinkovič",
+          "Meno": "Patrik",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Marekovič",
+          "Meno": "Tomáš",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Krchnák",
+          "Meno": "Erik",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Kondrc",
+          "Meno": "Dávid",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Kleiman",
+          "Meno": "Gabriel",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Izakovič",
+          "Meno": "Šimon",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Halenár",
+          "Meno": "Martin",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Gono",
+          "Meno": "Šimon",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Forišek",
+          "Meno": "Juraj",
+          "Trieda": "IV.EB"
+        },
+        {
+          "Priezvisko": "Beluško",
+          "Meno": "Adrián",
+          "Trieda": "IV.EB"
+        }
+      ]
+    },
+    "IV.EA": {
+      "triedny_ucitel": "Mária Medová",
+      "studenti": [
+        {
+          "Priezvisko": "Volek",
+          "Meno": "Matúš",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Vagala",
+          "Meno": "Dominik",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Tomáška",
+          "Meno": "Matúš",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Šuran",
+          "Meno": "Tomáš",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Škrobák",
+          "Meno": "Ľuboš",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Ščevik",
+          "Meno": "Ľuboš",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Sasko",
+          "Meno": "Marek",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Polakovič",
+          "Meno": "Sebastián",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Mikéci",
+          "Meno": "Martin",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Mesíček",
+          "Meno": "Mário",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Melicher",
+          "Meno": "Ondrej",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Lukačovič",
+          "Meno": "Viktor",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Lesay",
+          "Meno": "Adrián",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Kubiš",
+          "Meno": "Andrej",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Kubek",
+          "Meno": "Patrik",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Kitta",
+          "Meno": "Igor",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Kerepecký",
+          "Meno": "Juraj",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Karel",
+          "Meno": "Adam",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Hlavatovič",
+          "Meno": "Jozef",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Ďuroška",
+          "Meno": "Lukáš",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Ďuriš",
+          "Meno": "René",
+          "Trieda": "IV.EA"
+        },
+        {
+          "Priezvisko": "Bohunický",
+          "Meno": "Tomáš",
+          "Trieda": "IV.EA"
+        }
+      ]
+    }
+  },
+  "III.": {
+    "III.T": {
+      "triedny_ucitel": "Hana Horecká",
+      "studenti": [
+        {
+          "Priezvisko": "Uváček",
+          "Meno": "Dávid",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Uhrík",
+          "Meno": "Filip",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Šuranová",
+          "Meno": "Soňa",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Sabová",
+          "Meno": "Simona",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Porádková",
+          "Meno": "Nina",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Pontešová",
+          "Meno": "Lucia",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Miklušáková",
+          "Meno": "Soňa",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Martinovičová",
+          "Meno": "Bibiána",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Kubovčíková",
+          "Meno": "Adriána",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Kovařík",
+          "Meno": "Matej",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Kopčo",
+          "Meno": "Peter",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Kocianová",
+          "Meno": "Karolína",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Junas",
+          "Meno": "Daniel",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Jakubec",
+          "Meno": "Ivan",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Horváthová",
+          "Meno": "Petra",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Glasa",
+          "Meno": "Nicolas",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Gálová",
+          "Meno": "Veronika",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Gajdošík",
+          "Meno": "Matej",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Dugovičová",
+          "Meno": "Ivana",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Drdulová",
+          "Meno": "Noémi",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Bernáthová",
+          "Meno": "Barbora",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Beránek",
+          "Meno": "Patrik",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Beránek",
+          "Meno": "Adam",
+          "Trieda": "III.T"
+        },
+        {
+          "Priezvisko": "Babinec",
+          "Meno": "Dominik",
+          "Trieda": "III.T"
+        }
+      ]
+    },
+    "III.S": {
+      "triedny_ucitel": "Peter Sitta",
+      "studenti": [
+        {
+          "Priezvisko": "Tóth",
+          "Meno": "Patrik",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Tomek",
+          "Meno": "Ján",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Šimon",
+          "Meno": "Branislav",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Paldan",
+          "Meno": "Marián",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Maška",
+          "Meno": "Ondrej",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Kvanta",
+          "Meno": "Ľuboš",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Kutáleková",
+          "Meno": "Natália",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Kúdelka",
+          "Meno": "Sebastian",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Krampl",
+          "Meno": "Filip",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Kostolanský",
+          "Meno": "Matúš",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Karel",
+          "Meno": "Martin",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Indrišek",
+          "Meno": "Adrián",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Hrčka",
+          "Meno": "Martin",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Hovanec",
+          "Meno": "Miroslav",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Halada",
+          "Meno": "Martin",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Grejták",
+          "Meno": "Adam",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Grajciar",
+          "Meno": "Ondrej",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Dvorák",
+          "Meno": "Adam",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Danko",
+          "Meno": "Adam",
+          "Trieda": "III.S"
+        },
+        {
+          "Priezvisko": "Cintula",
+          "Meno": "Matúš",
+          "Trieda": "III.S"
+        }
+      ]
+    },
+    "III.P": {
+      "triedny_ucitel": "Jana Čechovičová",
+      "studenti": [
+        {
+          "Priezvisko": "Trebatická",
+          "Meno": "Valéria",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Talapa",
+          "Meno": "Šimon",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Škrabáková",
+          "Meno": "Laura",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Szabová",
+          "Meno": "Katarína",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Siváková",
+          "Meno": "Dominika",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Schwarz",
+          "Meno": "Christian Josef",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Sahulová",
+          "Meno": "Dominika",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Rybárová",
+          "Meno": "Nina",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Plaštiaková",
+          "Meno": "Mária",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Paveleková",
+          "Meno": "Karin",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Mogilská",
+          "Meno": "Alžbeta",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Mitošinková",
+          "Meno": "Ľubica",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Michaličková",
+          "Meno": "Romana",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Makýšová",
+          "Meno": "Alexandra",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Križanová",
+          "Meno": "Erika",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Kozáková",
+          "Meno": "Stella",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Kopáčiková",
+          "Meno": "Sylvia",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Kochajdová",
+          "Meno": "Monika",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Jašková",
+          "Meno": "Dominika",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Janšáková",
+          "Meno": "Natália",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Ivaničová",
+          "Meno": "Nina",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Hrúzová",
+          "Meno": "Dominika",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Hečková",
+          "Meno": "Tatiana",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Hanusová",
+          "Meno": "Vladimíra",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Haljáková",
+          "Meno": "Nikola",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Gašparová",
+          "Meno": "Simona",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Ernstová",
+          "Meno": "Petra",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Blanarovičová",
+          "Meno": "Martina",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Blahová",
+          "Meno": "Nikola",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Babóšová",
+          "Meno": "Barbora",
+          "Trieda": "III.P"
+        },
+        {
+          "Priezvisko": "Áčová",
+          "Meno": "Dominika",
+          "Trieda": "III.P"
+        }
+      ]
+    },
+    "III.M": {
+      "triedny_ucitel": "Renáta Olexová",
+      "studenti": [
+        {
+          "Priezvisko": "Zábrodský",
+          "Meno": "Lukáš",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Vozár",
+          "Meno": "Jozef",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Urbánek",
+          "Meno": "Adam",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Tóth",
+          "Meno": "Róbert",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Tokoš",
+          "Meno": "Juraj",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Raffay",
+          "Meno": "Tobiáš",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Püšpöky",
+          "Meno": "Mário",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Polakovič",
+          "Meno": "Vladimír",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Podhorský",
+          "Meno": "Lukáš",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Pikus",
+          "Meno": "Matej",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Ozimák",
+          "Meno": "Eduard",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Ľudma",
+          "Meno": "Pavol",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Lančarič",
+          "Meno": "Adam",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Kvasnica",
+          "Meno": "Andrej",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Kvak",
+          "Meno": "Tomáš",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Králik",
+          "Meno": "Rudolf",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Kostolanský",
+          "Meno": "Marcel",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Karika",
+          "Meno": "Adam",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Kabát",
+          "Meno": "Adam",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Holický",
+          "Meno": "Matúš",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Gažovič",
+          "Meno": "Dušan",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Doboš",
+          "Meno": "Martin",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Deák",
+          "Meno": "Denis",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Daniel",
+          "Meno": "Pavol",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Čellár",
+          "Meno": "Erik",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Burský",
+          "Meno": "Denis",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Blažo",
+          "Meno": "Jozef",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Beták",
+          "Meno": "Andrej",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Barčák",
+          "Meno": "Martin",
+          "Trieda": "III.M"
+        },
+        {
+          "Priezvisko": "Baranovič",
+          "Meno": "Oliver",
+          "Trieda": "III.M"
+        }
+      ]
+    },
+    "III.EB": {
+      "triedny_ucitel": "Jozef Augustín",
+      "studenti": [
+        {
+          "Priezvisko": "Žák",
+          "Meno": "Lukáš",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Vala",
+          "Meno": "Maroš",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Tichý",
+          "Meno": "Jakub",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Šiška",
+          "Meno": "Juraj",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Ščasný",
+          "Meno": "Andrej",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Repčík",
+          "Meno": "Róbert",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Püšpöky",
+          "Meno": "Martin",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Pekarovič",
+          "Meno": "Adrián",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Oravec",
+          "Meno": "Jakub",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Nádaský",
+          "Meno": "Róbert",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Moravec",
+          "Meno": "Kristián",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Mikluš",
+          "Meno": "Matej",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Mesíček",
+          "Meno": "Šimon",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Matovič",
+          "Meno": "Erik",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Martinovič",
+          "Meno": "Jakub",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Kuracina",
+          "Meno": "Stanislav",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Kucej",
+          "Meno": "Kristián",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Krupa",
+          "Meno": "Tomáš",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Jurík",
+          "Meno": "Miroslav",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Haraj",
+          "Meno": "Kristián",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Hanzel",
+          "Meno": "Adam",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Drobný",
+          "Meno": "Dávid",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Dedič",
+          "Meno": "Viktor",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Brestovanský",
+          "Meno": "Martin",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Bilčík",
+          "Meno": "Michal",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Benedikovič",
+          "Meno": "Adam",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Bavolár",
+          "Meno": "Adam",
+          "Trieda": "III.EB"
+        },
+        {
+          "Priezvisko": "Balažovič",
+          "Meno": "Marek",
+          "Trieda": "III.EB"
+        }
+      ]
+    },
+    "III.EA": {
+      "triedny_ucitel": "Viera Jurinová",
+      "studenti": [
+        {
+          "Priezvisko": "Vyskoč",
+          "Meno": "Dominik",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Vrtoch",
+          "Meno": "Marek",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Vlkovič",
+          "Meno": "Lukáš",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Veneni",
+          "Meno": "Ivan",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Švorčík",
+          "Meno": "Tomáš",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Šuran",
+          "Meno": "Martin",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Šichmák",
+          "Meno": "Martin",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Semelý",
+          "Meno": "Pavol",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Sámel",
+          "Meno": "Jakub",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Mráz",
+          "Meno": "Adam",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Magula",
+          "Meno": "Patrik",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Lančarič",
+          "Meno": "Erik",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Kralovič",
+          "Meno": "Adam",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Klimo",
+          "Meno": "Erik",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Kekelák",
+          "Meno": "Erik",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Chalány",
+          "Meno": "David",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Danišovič",
+          "Meno": "Vladimír",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Brezovan",
+          "Meno": "Martin",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Brečka",
+          "Meno": "Henrich",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Bosý",
+          "Meno": "Adam",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Bohunický",
+          "Meno": "Peter",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Barbas",
+          "Meno": "Martin",
+          "Trieda": "III.EA"
+        },
+        {
+          "Priezvisko": "Balala",
+          "Meno": "Dominik",
+          "Trieda": "III.EA"
+        }
+      ]
+    }
+  },
+  "II.": {
+    "II.T": {
+      "triedny_ucitel": "Miriam Ambrušová",
+      "studenti": [
+        {
+          "Priezvisko": "Zvonárová",
+          "Meno": "Petra",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Zlatohlávková",
+          "Meno": "Lenka",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Trokanová",
+          "Meno": "Barbora",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Šurin",
+          "Meno": "Daniel",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Škurla",
+          "Meno": "Matej",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Spevák",
+          "Meno": "Marek",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Puschenreiter",
+          "Meno": "Juraj",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Púčik",
+          "Meno": "Timotej",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Miklošík",
+          "Meno": "Maroš",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Melicherčík",
+          "Meno": "Patrik",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Marček",
+          "Meno": "Andrej",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Le Van",
+          "Meno": "Hung",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Kyselica",
+          "Meno": "Denis",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Kulich",
+          "Meno": "Martin",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Kubiček",
+          "Meno": "Tomáš",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Impenzová",
+          "Meno": "Laura",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Gula",
+          "Meno": "Alexander",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Elišová",
+          "Meno": "Zuzana",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Bocora",
+          "Meno": "Ladislav",
+          "Trieda": "II.T"
+        },
+        {
+          "Priezvisko": "Bíliková",
+          "Meno": "Andrea",
+          "Trieda": "II.T"
+        }
+      ]
+    },
+    "II.SP": {
+      "triedny_ucitel": "Xénia Strmenská",
+      "studenti": [
+        {
+          "Priezvisko": "Zmajkovič",
+          "Meno": "Michal",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Závodský",
+          "Meno": "Peter",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Vu hoai",
+          "Meno": "Nam",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Vojtík",
+          "Meno": "Marek",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Taranda",
+          "Meno": "Pavol",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Škultéty",
+          "Meno": "Sebastián",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Škoda",
+          "Meno": "Michal",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Šipkovský",
+          "Meno": "Samuel",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Sobota",
+          "Meno": "Peter",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Mesíček",
+          "Meno": "Kristián",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Majzel",
+          "Meno": "Matúš",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Magula",
+          "Meno": "Dávid",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Lovász",
+          "Meno": "Erik",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Lančarič",
+          "Meno": "Adam",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Králik",
+          "Meno": "Filip",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Jelačič",
+          "Meno": "Erik",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Chmelár",
+          "Meno": "Nikolas",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Horvát",
+          "Meno": "Patrik",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Heltko",
+          "Meno": "Ľuboš",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Hasaj",
+          "Meno": "Matúš",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Galba",
+          "Meno": "Samuel",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Fišera",
+          "Meno": "Boris",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Drgoň",
+          "Meno": "Dalibor",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Demovič",
+          "Meno": "Matúš",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Butaš",
+          "Meno": "Richard",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Branický",
+          "Meno": "Richard",
+          "Trieda": "II.SP"
+        },
+        {
+          "Priezvisko": "Balažovič",
+          "Meno": "Matúš",
+          "Trieda": "II.SP"
+        }
+      ]
+    },
+    "II.P": {
+      "triedny_ucitel": "Zdena Zimanová",
+      "studenti": [
+        {
+          "Priezvisko": "Žáková",
+          "Meno": "Klaudia",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Zacharová",
+          "Meno": "Radoslava",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Zacharová",
+          "Meno": "Martina",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Talapová",
+          "Meno": "Tereza",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Šúryová",
+          "Meno": "Alexandra",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Škodová",
+          "Meno": "Natália",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Šarmírová",
+          "Meno": "Kristína",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Stračárová",
+          "Meno": "Tatiana",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Sloboda",
+          "Meno": "Andrej",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Rožňovská",
+          "Meno": "Nadire",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Repová",
+          "Meno": "Zuzana",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Pop",
+          "Meno": "Branislav",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Poláček",
+          "Meno": "Lukáš",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Mogilská",
+          "Meno": "Erika",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Mikulášek",
+          "Meno": "Andrej",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Mikolášová",
+          "Meno": "Klaudia",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Lenghardová",
+          "Meno": "Tatiana",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Koštialová",
+          "Meno": "Jana",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Kopúneková",
+          "Meno": "Kristína",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Kadlečíková",
+          "Meno": "Ivana",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Junasová",
+          "Meno": "Sandra",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Jakabovičová",
+          "Meno": "Simona",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Izakovičová",
+          "Meno": "Marcela",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Chudá",
+          "Meno": "Simona",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Horčičková",
+          "Meno": "Veronika",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Cerovský",
+          "Meno": "Juraj",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Bangová",
+          "Meno": "Denisa",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Augustínová",
+          "Meno": "Lucia",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Alexandrová",
+          "Meno": "Vanesa",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Adamec",
+          "Meno": "Jakub",
+          "Trieda": "II.P"
+        },
+        {
+          "Priezvisko": "Áč",
+          "Meno": "Patrik",
+          "Trieda": "II.P"
+        }
+      ]
+    },
+    "II.M": {
+      "triedny_ucitel": "Janka Krištienová",
+      "studenti": [
+        {
+          "Priezvisko": "Uhlík",
+          "Meno": "Kristián",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Tornóci",
+          "Meno": "Michal",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Suchoň",
+          "Meno": "Róbert",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Strmenský",
+          "Meno": "Daniel",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Roščák",
+          "Meno": "Daniel",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Pleva",
+          "Meno": "Matej",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Pecko",
+          "Meno": "Martin",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Nižňanská",
+          "Meno": "Zuzana",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Lukačovič",
+          "Meno": "Tomáš",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Lukačovič",
+          "Meno": "Erik",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Lackovič",
+          "Meno": "Marcel",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Kurňava",
+          "Meno": "Ivan",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Kriho",
+          "Meno": "Peter",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Král",
+          "Meno": "Jakub",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Krajčovič",
+          "Meno": "Samuel",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Kollarovič",
+          "Meno": "Patrik",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Jindra",
+          "Meno": "Viktor",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Ješko",
+          "Meno": "Maroš",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Janečka",
+          "Meno": "Peter",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Jalovec",
+          "Meno": "Kristián",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Chytil",
+          "Meno": "Dávid",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Hutár",
+          "Meno": "Viktor",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Hruška",
+          "Meno": "Mário",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Haška",
+          "Meno": "Matej",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Fitoš",
+          "Meno": "Matej",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Fabian",
+          "Meno": "Filip",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Dúbravský",
+          "Meno": "Adam",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Čambál",
+          "Meno": "René",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Butt",
+          "Meno": "Benjamín",
+          "Trieda": "II.M"
+        },
+        {
+          "Priezvisko": "Augustín",
+          "Meno": "Martin",
+          "Trieda": "II.M"
+        }
+      ]
+    },
+    "II.EB": {
+      "triedny_ucitel": "Tatiana Prochyrová",
+      "studenti": [
+        {
+          "Priezvisko": "Vančo",
+          "Meno": "Damián",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Trnavská",
+          "Meno": "Nina",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Tomovič",
+          "Meno": "Matej",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Šabík",
+          "Meno": "Tomáš",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Szeliga",
+          "Meno": "Peter",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Szabo",
+          "Meno": "Dominik",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Siska",
+          "Meno": "Tomáš",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Roman",
+          "Meno": "Patrik",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Plott",
+          "Meno": "Andrej",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Piši",
+          "Meno": "David",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Pačesa",
+          "Meno": "Michal",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Miksád",
+          "Meno": "Filip",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Mičo",
+          "Meno": "Kristian",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Matula",
+          "Meno": "Matúš",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Kubík",
+          "Meno": "Samuel",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Kemka",
+          "Meno": "David",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Kača",
+          "Meno": "Jakub",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Ďurický",
+          "Meno": "Tomáš",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Butko",
+          "Meno": "Adrián",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Bohunický",
+          "Meno": "Marek",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Bílik",
+          "Meno": "Adrián",
+          "Trieda": "II.EB"
+        },
+        {
+          "Priezvisko": "Benko",
+          "Meno": "Jakub",
+          "Trieda": "II.EB"
+        }
+      ]
+    },
+    "II.EA": {
+      "triedny_ucitel": "Ján Kvasničák",
+      "studenti": [
+        {
+          "Priezvisko": "Šturdík",
+          "Meno": "Martin",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Srnák",
+          "Meno": "Erik",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Richnák",
+          "Meno": "Jakub",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Remenár",
+          "Meno": "Andrej",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Rakovická",
+          "Meno": "Natália",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Planeta",
+          "Meno": "Dominik",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Nemeček",
+          "Meno": "Martin",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Mršťák",
+          "Meno": "Patrik",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Melicher",
+          "Meno": "Samo",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Marek",
+          "Meno": "Filip",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Madzík",
+          "Meno": "Miroslav",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Kyselica",
+          "Meno": "Martin",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Kováč",
+          "Meno": "Ivan",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Kačinec",
+          "Meno": "Tomáš",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Chudják",
+          "Meno": "Tomáš",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Herák",
+          "Meno": "Erik",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Gergel",
+          "Meno": "Marek",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Gajdošík",
+          "Meno": "Damián",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Fančovič",
+          "Meno": "Martin",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Daniš",
+          "Meno": "Matej",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Čavojský",
+          "Meno": "Filip",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Braniš",
+          "Meno": "Lukáš",
+          "Trieda": "II.EA"
+        },
+        {
+          "Priezvisko": "Bielko",
+          "Meno": "Ladislav",
+          "Trieda": "II.EA"
+        }
+      ]
+    }
+  },
+  "I.": {
+    "I.S": {
+      "triedny_ucitel": "Lucia Turzerová",
+      "studenti": [
+        {
+          "Priezvisko": "Žemla",
+          "Meno": "Adrián",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Solník",
+          "Meno": "Vladimír",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Sklenár",
+          "Meno": "Filip",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Sedláková",
+          "Meno": "Eva",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Sabadoš",
+          "Meno": "Andrej",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Paulík",
+          "Meno": "Samuel",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Oravec",
+          "Meno": "Boris",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Mráz",
+          "Meno": "Marek",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Mitošinka",
+          "Meno": "Tomáš",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Mihalovič",
+          "Meno": "Miroslav",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Majcík",
+          "Meno": "Martin",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Kollár",
+          "Meno": "Denis",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Kollár",
+          "Meno": "David",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Janšák",
+          "Meno": "Matej",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Hrdý",
+          "Meno": "Dalibor",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Gondža",
+          "Meno": "Igor",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Cintula",
+          "Meno": "Ján",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Brunovský",
+          "Meno": "Kristián",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Brisuda",
+          "Meno": "Michal",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Brestovanský",
+          "Meno": "Jakub",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Bokor",
+          "Meno": "Daniel",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Benková",
+          "Meno": "Naďa",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Benčík",
+          "Meno": "Adam",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Barkoczi",
+          "Meno": "Tomáš",
+          "Trieda": "I.S"
+        },
+        {
+          "Priezvisko": "Baláž",
+          "Meno": "Matúš",
+          "Trieda": "I.S"
+        }
+      ]
+    },
+    "I.PT": {
+      "triedny_ucitel": "Viola Sittová",
+      "studenti": [
+        {
+          "Priezvisko": "Vnenčáková",
+          "Meno": "Viktória",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Urminská",
+          "Meno": "Mária",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Tomovičová",
+          "Meno": "Barbora",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Šaradínová",
+          "Meno": "Lucia",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Stacho",
+          "Meno": "Adam",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Solčániová",
+          "Meno": "Alexandra",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Sloboda",
+          "Meno": "Ján",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Slatinová",
+          "Meno": "Erika",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Rovenská",
+          "Meno": "Petra",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Prochyrová",
+          "Meno": "Zuzana",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Píšová",
+          "Meno": "Lucia",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Palkovičová",
+          "Meno": "Lea",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Nemlahová",
+          "Meno": "Veronika",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Michalčáková",
+          "Meno": "Marcela",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Mihoková",
+          "Meno": "Petra",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Máťaš",
+          "Meno": "Matej",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Lančaričová",
+          "Meno": "Lenka",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Kovačicová",
+          "Meno": "Daša",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Ježo",
+          "Meno": "Ivan",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Jakušová",
+          "Meno": "Alexandra",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Chalányová",
+          "Meno": "Soňa",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Hubáčiková",
+          "Meno": "Terézia",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Hlaďová",
+          "Meno": "Katarína",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Hettešová",
+          "Meno": "Dominika",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Haladová",
+          "Meno": "Dominika",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Feješ",
+          "Meno": "Miroslav",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Farár",
+          "Meno": "Pavol",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Dlábiková",
+          "Meno": "Magdaléna",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Danihelová",
+          "Meno": "Lenka",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Búran",
+          "Meno": "Jaroslav",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Banovič",
+          "Meno": "Kristián",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Baková",
+          "Meno": "Monika",
+          "Trieda": "I.PT"
+        },
+        {
+          "Priezvisko": "Bachratý",
+          "Meno": "Denis",
+          "Trieda": "I.PT"
+        }
+      ]
+    },
+    "I.PRO": {
+      "triedny_ucitel": "Petr Čmilanský",
+      "studenti": [
+        {
+          "Priezvisko": "Zvolenský",
+          "Meno": "Matúš",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Zedek",
+          "Meno": "Dávid",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Vyskoč",
+          "Meno": "Tomáš",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Volf",
+          "Meno": "Jakub Ján",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Vajdík",
+          "Meno": "Samuel",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Ušák",
+          "Meno": "Jakub",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Šulan",
+          "Meno": "Dávid",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Štrbík",
+          "Meno": "Adam",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Ščasnovič",
+          "Meno": "Martin",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Silný",
+          "Meno": "Dominik",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Patrikár",
+          "Meno": "Richard",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Lukovič",
+          "Meno": "Samuel",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Lenghart",
+          "Meno": "Samuel",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Kovačic",
+          "Meno": "Jakub",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Janovič",
+          "Meno": "Jakub",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Hudek",
+          "Meno": "Juraj",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Horváth",
+          "Meno": "Adam",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Hečko",
+          "Meno": "Matej",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Halada",
+          "Meno": "Patrik",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Černák",
+          "Meno": "Filip",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Bublavý",
+          "Meno": "Matúš",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Brezovský",
+          "Meno": "Jakub",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Branišovič",
+          "Meno": "Filip",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Bilčík",
+          "Meno": "Adam",
+          "Trieda": "I.PRO"
+        },
+        {
+          "Priezvisko": "Balažovič",
+          "Meno": "Michal",
+          "Trieda": "I.PRO"
+        }
+      ]
+    },
+    "I.M": {
+      "triedny_ucitel": "Elena Melicherčíková",
+      "studenti": [
+        {
+          "Priezvisko": "Rosypal",
+          "Meno": "Samuel",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Püšpöky",
+          "Meno": "Marek",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Procházka",
+          "Meno": "Oliver",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Paulík",
+          "Meno": "Matúš",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Pastieriková",
+          "Meno": "Emma",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Novosedlík",
+          "Meno": "Lukáš",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Nemček",
+          "Meno": "Kristián",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Navrátil",
+          "Meno": "Ľuboš",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Morvay",
+          "Meno": "Adam",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Majerovský",
+          "Meno": "Andrej",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Machovič",
+          "Meno": "Andrej",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Lešňovský",
+          "Meno": "Matej",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Kubovič",
+          "Meno": "Ivan",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Královič",
+          "Meno": "Jakub",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Kotleba",
+          "Meno": "Lukáš",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Kollár",
+          "Meno": "Filip",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Kolár",
+          "Meno": "Maroš",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Jarabik",
+          "Meno": "Patrik",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Horník",
+          "Meno": "Daniel",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Homola",
+          "Meno": "Mário",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Grman",
+          "Meno": "Patrik",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Gál",
+          "Meno": "Štefan",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Fašanga",
+          "Meno": "Martin",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Danihel",
+          "Meno": "Miroslav",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Červenka",
+          "Meno": "Matúš",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Burieta",
+          "Meno": "Andrej",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Bláha",
+          "Meno": "Mário",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Biháry",
+          "Meno": "Adrián",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Bennár",
+          "Meno": "Matej",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Baron",
+          "Meno": "Samuel",
+          "Trieda": "I.M"
+        },
+        {
+          "Priezvisko": "Akbar",
+          "Meno": "Samuel",
+          "Trieda": "I.M"
+        }
+      ]
+    },
+    "I.EB": {
+      "triedny_ucitel": "Beáta Izakovičová",
+      "studenti": [
+        {
+          "Priezvisko": "Zámečník",
+          "Meno": "Matej",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Velický",
+          "Meno": "Tomáš",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Urminský",
+          "Meno": "Gabriel",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Tollarovič",
+          "Meno": "Samuel",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Šottník",
+          "Meno": "Jakub",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Suchán",
+          "Meno": "Alex",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Pikna",
+          "Meno": "Peter",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Piešťanský",
+          "Meno": "Patrik",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Okleštek",
+          "Meno": "Andrej",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Očkovský",
+          "Meno": "Adrián",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Novák",
+          "Meno": "Patrik",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Mrva",
+          "Meno": "Gabriel",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Miček",
+          "Meno": "Adam",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Lávečka",
+          "Meno": "Dávid",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Krajčovič",
+          "Meno": "Tomáš",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Krajča",
+          "Meno": "Adrián",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Klačo",
+          "Meno": "Milan",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Hulák",
+          "Meno": "Marek",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Horňák",
+          "Meno": "René",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Gála",
+          "Meno": "Patrik",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Fuňák",
+          "Meno": "Matúš",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Dúbravec",
+          "Meno": "Peter",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Demidov",
+          "Meno": "Bohdan",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Blaho",
+          "Meno": "Tomáš",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Bíro",
+          "Meno": "Patrik",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Bílik",
+          "Meno": "Peter",
+          "Trieda": "I.EB"
+        },
+        {
+          "Priezvisko": "Bako",
+          "Meno": "Peter",
+          "Trieda": "I.EB"
+        }
+      ]
+    },
+    "I.EA": {
+      "triedny_ucitel": "Jana Hlinčíková",
+      "studenti": [
+        {
+          "Priezvisko": "Zetocha",
+          "Meno": "Erik",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Varga",
+          "Meno": "Kristián",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Tančok",
+          "Meno": "Tomáš",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Suhaj",
+          "Meno": "Patrik",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Peňak",
+          "Meno": "Dominik Vincent",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Pavlík",
+          "Meno": "Vladimír",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Mráz",
+          "Meno": "Matúš",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Mihálik",
+          "Meno": "Erik",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Martinkovič",
+          "Meno": "Timothy",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Lukáč",
+          "Meno": "Jozef",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Kukučka",
+          "Meno": "František",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Kovársky",
+          "Meno": "Jakub",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Kohútik",
+          "Meno": "Denis",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Husár",
+          "Meno": "Marcel",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Hudcovič",
+          "Meno": "Lukáš",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Hlbocký",
+          "Meno": "Erik",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Dufek",
+          "Meno": "Tomáš",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Dúbravec",
+          "Meno": "Pavol",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Doboš",
+          "Meno": "Filip",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Derzsi",
+          "Meno": "Patrik",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Danišovič",
+          "Meno": "Slavomír",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Černička",
+          "Meno": "Ján",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Bunta",
+          "Meno": "Tomáš",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Benovič",
+          "Meno": "Erik",
+          "Trieda": "I.EA"
+        },
+        {
+          "Priezvisko": "Baran",
+          "Meno": "Marcel",
+          "Trieda": "I.EA"
+        }
+      ]
+    }
+  }
+}
