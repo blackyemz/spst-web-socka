@@ -4,14 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SPŠ Technická Trnava – Kontakt</title>
-  <meta name="description" content="Kontaktné informácie, adresa a mapa Strednej priemyselnej školy technickej v Trnave." />
-
   <style>
-    /* --- 1. ZÁKLADNÉ PREMENNÉ --- */
+    /* --- 1. ZDIEĽANÉ PREMENNÉ --- */
     :root { 
       --modra: #0c2f96; 
       --zlta: #ceed2f; 
-      --biela: #acbfbd; 
       --pozadie: #f4f4f4; 
       --karta-bg: #ffffff; 
       --text: #0c2f96; 
@@ -21,22 +18,27 @@
     .dark-mode { 
       --modra: #b5c8ff; 
       --zlta: #f0f169; 
-      --biela: #1e1e1e; 
       --pozadie: #121212; 
       --karta-bg: #1e1e1e; 
       --text: #e2e2e2; 
       --border: #333; 
     }
 
+    /* --- 2. LAYOUT (FLEXBOX) --- */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
     body { 
-      margin: 0; 
       font-family: 'Segoe UI', Tahoma, sans-serif; 
       background-color: var(--pozadie); 
       color: var(--text); 
       transition: background-color 0.4s, color 0.4s; 
+      display: flex;
+      flex-direction: column;
     }
 
-    /* --- 2. HLAVIČKA --- */
     header {
       display: flex;
       justify-content: space-between;
@@ -50,24 +52,19 @@
       min-height: 80px;
     }
 
-    .logo { 
-      height: 100px; 
-      width: auto;
-      object-fit: contain; 
-      background-color: #5e8fd8; 
-      padding: 5px 10px; 
-      border-radius: 8px; 
-      display: block;
+    main { 
+      flex: 1; /* Odtlačí footer dole */
+      max-width: 1100px; 
+      width: 100%;
+      margin: 2rem auto; 
+      padding: 0 1rem 2rem; 
+      box-sizing: border-box;
     }
 
-    .header-right { 
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 20px;
-    }
+    /* --- 3. PRVKY --- */
+    .logo { height: 100px; width: auto; object-fit: contain; background-color: #5e8fd8; padding: 5px 10px; border-radius: 8px; display: block; }
+    .header-right { display: flex; align-items: center; gap: 20px; }
 
-    /* --- 3. HAMBURGER --- */
     .menu-toggle { display: flex; flex-direction: column; justify-content: space-between; width: 32px; height: 24px; cursor: pointer; z-index: 1001; }
     .menu-toggle span { display: block; height: 3px; width: 100%; background-color: var(--modra); border-radius: 3px; transition: 0.3s; }
     .dark-mode .menu-toggle span { background-color: var(--zlta); }
@@ -75,11 +72,8 @@
     .menu-toggle.active span:nth-child(2) { opacity: 0; }
     .menu-toggle.active span:nth-child(3) { transform: translateY(-10.5px) rotate(-45deg); }
 
-    /* --- 4. MENU --- */
     nav { 
       display: none; 
-      flex-direction: row; 
-      flex-wrap: wrap; 
       justify-content: center; 
       background-color: var(--karta-bg); 
       padding: 1.5rem; 
@@ -91,96 +85,48 @@
       gap: 1.5rem; 
       box-sizing: border-box;
     }
-    nav.show { display: flex; animation: slideDown 0.3s ease-out; }
+    nav.show { display: flex; flex-wrap: wrap; animation: slideDown 0.3s ease-out; }
     @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     
-    nav a { text-decoration: none; color: var(--modra); font-weight: 600; font-size: 1.1rem; padding: 5px 10px; position: relative; }
-    nav a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px; background-color: var(--zlta); transition: 0.3s; }
-    nav a:hover::after { width: 100%; }
+    nav a { text-decoration: none; color: var(--modra); font-weight: 600; font-size: 1.1rem; padding: 5px 10px; }
+    nav a:hover { text-decoration: underline; }
     .dark-mode nav a { color: var(--zlta); }
 
     .theme-toggle { background: none; border: 2px solid var(--zlta); color: var(--modra); font-size: 1.2rem; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
     .dark-mode .theme-toggle { background-color: var(--zlta); color: #1e1e1e; }
 
-    /* --- 5. KONTAKTNÁ SEKCIA --- */
-    main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem 2rem; }
-    
+    /* --- 4. OBSAH --- */
     h1 { text-align: center; margin-bottom: 2rem; }
-
-    .contact-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    .contact-card {
-      background-color: var(--karta-bg);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      border: 1px solid var(--border);
-    }
-
-    .contact-info p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin: 0.5rem 0;
-    }
-
+    .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+    .contact-card { background-color: var(--karta-bg); padding: 2rem; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .contact-info p { font-size: 1.1rem; line-height: 1.8; margin: 0.5rem 0; }
     .contact-info strong { font-size: 1.3rem; color: var(--modra); }
     .dark-mode .contact-info strong { color: var(--zlta); }
-
     .contact-info a { color: var(--modra); text-decoration: none; font-weight: 600; }
     .dark-mode .contact-info a { color: var(--zlta); }
-    .contact-info a:hover { text-decoration: underline; }
 
     .socials { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
-    .social-btn {
-      background-color: var(--modra);
-      color: #fff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-      display: inline-block;
-    }
+    .social-btn { background-color: var(--modra); color: #fff; padding: 0.8rem 1.5rem; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
     .social-btn:hover { background-color: var(--zlta); color: #0c2f96; }
-    .dark-mode .social-btn { background-color: var(--border); color: var(--text); }
-    .dark-mode .social-btn:hover { background-color: var(--zlta); color: #000; }
 
-    .map-container iframe {
-      width: 100%;
-      height: 450px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
+    .map-container iframe { width: 100%; height: 450px; border-radius: 8px; border: 1px solid var(--border); }
 
-    footer { background-color: var(--modra); color: #fff; text-align: center; padding: 1.5rem; margin-top: 2rem; }
+    footer { background-color: var(--modra); color: #fff; text-align: center; padding: 1.5rem; width: 100%; box-sizing: border-box; }
     .dark-mode footer { background-color: #0c0c0c; color: var(--zlta); }
-    footer a { color: var(--zlta); text-decoration: none; margin: 0 0.5rem; }
 
     @media (max-width: 800px) {
       .contact-container { grid-template-columns: 1fr; }
       .logo { height: 80px; }
-      .header-right { gap: 10px; }
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <a href="index.html">
-      <img src="logo.png" alt="Logo SPŠ Trnava" class="logo" onerror="this.style.display='none'">
-    </a>
+    <a href="index.html"><img src="logo.png" alt="Logo SPŠ Trnava" class="logo" onerror="this.style.display='none'"></a>
     <div class="header-right">
-      <button class="theme-toggle" id="themeToggle" title="Prepnúť tému">🌙</button>
-      <div class="menu-toggle" id="menuToggle">
-        <span></span><span></span><span></span>
-      </div>
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+      <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
     </div>
   </header>
 
@@ -194,9 +140,7 @@
 
   <main>
     <h1>Kontaktujte nás</h1>
-
     <div class="contact-container">
-      
       <div class="contact-card">
         <div class="contact-info">
           <p><strong>Stredná priemyselná škola technická</strong></p>
@@ -204,25 +148,24 @@
           <p>📞 Telefón: <a href="tel:+421335515111">+421 33 551 51 11</a></p>
           <p>✉️ Email: <a href="mailto:info@spstt.sk">info@spstt.sk</a></p>
         </div>
-
         <div class="socials">
           <a href="https://www.facebook.com/spsTrnava" target="_blank" class="social-btn">Facebook</a>
           <a href="https://www.instagram.com/spstechnickatrnava/" target="_blank" class="social-btn">Instagram</a>
           <a href="https://spstt.edupage.org/" target="_blank" class="social-btn">EduPage</a>
         </div>
       </div>
-
+      
       <div class="map-container">
         <iframe 
-          src="https://maps.google.com/maps?q=Komensk%C3%A9ho+1,+Trnava&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-          width="600" 
+          width="100%" 
           height="450" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy">
+          frameborder="0" 
+          scrolling="no" 
+          marginheight="0" 
+          marginwidth="0" 
+          src="https://maps.google.com/maps?q=Komensk%C3%A9ho%201%2C%20917%2002%20Trnava&t=&z=15&ie=UTF8&iwloc=&output=embed">
         </iframe>
       </div>
-
     </div>
   </main>
 
@@ -236,8 +179,7 @@
     const nav = document.getElementById('mainNav');
     const header = document.querySelector('header');
 
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+    if (localStorage.getItem('theme') === 'dark') {
       document.body.classList.add('dark-mode');
       toggleTheme.textContent = '🌞';
     }
@@ -252,21 +194,10 @@
     menuToggle.addEventListener('click', () => {
       nav.classList.toggle('show');
       menuToggle.classList.toggle('active');
-      
-      if (nav.classList.contains('show')) {
-        nav.style.top = `${header.offsetHeight}px`;
-      }
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && !menuToggle.contains(e.target) && nav.classList.contains('show')) {
-        nav.classList.remove('show');
-        menuToggle.classList.remove('active');
-      }
+      if (nav.classList.contains('show')) nav.style.top = `${header.offsetHeight}px`;
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
