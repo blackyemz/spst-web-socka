@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SPŠ Technická Trnava – Riaditelia</title>
   <style>
-    
+    /* --- 1. ZDIEĽANÉ PREMENNÉ --- */
     :root {
       --modra: #0c2f96;
       --zlta: #ceed2f;
@@ -26,69 +26,101 @@
       --border: #333;
     }
 
-    body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--pozadie); color: var(--text); transition: 0.4s; }
+    /* --- OPRAVA FOOTERA (Flexbox Layout) --- */
+    html, body {
+      height: 100%;
+    }
 
-    header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background-color: var(--karta-bg); box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-    .logo { height: 60px; object-fit: contain; background-color: #5e8fd8; padding: 6px 10px; border-radius: 10px; }
-    .header-right { display: flex; align-items: center; gap: 1rem; }
+    body { 
+      margin: 0; 
+      font-family: 'Segoe UI', Tahoma, sans-serif; 
+      background-color: var(--pozadie); 
+      color: var(--text); 
+      transition: background-color 0.4s, color 0.4s; 
+      scroll-behavior: smooth; 
+      display: flex;
+      flex-direction: column;
+    }
+
+    main { 
+      flex: 1;
+      max-width: 1000px; 
+      width: 100%;
+      margin: 2rem auto; 
+      padding: 0 1rem 2rem; 
+      box-sizing: border-box;
+    }
+
+    /* --- HLAVIČKA --- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 2rem;
+      background-color: var(--karta-bg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      min-height: 80px;
+    }
+
+    .logo { height: 100px; width: auto; object-fit: contain; background-color: #5e8fd8; padding: 5px 10px; border-radius: 8px; display: block; }
+    .header-right { display: flex; flex-direction: row; align-items: center; gap: 20px; }
     
-    .menu-toggle { display: flex; flex-direction: column; justify-content: space-between; width: 28px; height: 20px; cursor: pointer; }
+    .menu-toggle { display: flex; flex-direction: column; justify-content: space-between; width: 32px; height: 24px; cursor: pointer; z-index: 1001; }
     .menu-toggle span { display: block; height: 3px; width: 100%; background-color: var(--modra); border-radius: 3px; transition: 0.3s; }
     .dark-mode .menu-toggle span { background-color: var(--zlta); }
-    .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(1) { transform: translateY(10.5px) rotate(45deg); }
     .menu-toggle.active span:nth-child(2) { opacity: 0; }
-    .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .menu-toggle.active span:nth-child(3) { transform: translateY(-10.5px) rotate(-45deg); }
 
-    nav { display: none; justify-content: center; gap: 2rem; background-color: var(--karta-bg); padding: 1rem; width: 100%; position: absolute; left: 0; top: 100%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    nav.show { display: flex; flex-wrap: wrap; }
-    nav a { text-decoration: none; color: var(--modra); font-weight: 600; padding: 0.5rem; }
-    nav a:hover { text-decoration: underline; }
+    nav { 
+      display: none; 
+      flex-direction: row; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      background-color: var(--karta-bg); 
+      padding: 1.5rem; 
+      width: 100%; 
+      position: fixed; 
+      left: 0; 
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1); 
+      z-index: 999; 
+      gap: 1.5rem; 
+      box-sizing: border-box; 
+    }
+    nav.show { display: flex; animation: slideDown 0.3s ease-out; }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    
+    nav a { text-decoration: none; color: var(--modra); font-weight: 600; font-size: 1.1rem; padding: 5px 10px; position: relative; }
+    nav a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px; background-color: var(--zlta); transition: width 0.3s ease; }
+    nav a:hover::after { width: 100%; }
     .dark-mode nav a { color: var(--zlta); }
     
-    .theme-toggle { background: none; border: 2px solid var(--zlta); color: var(--modra); font-size: 1.2rem; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; }
+    .theme-toggle { background: none; border: 2px solid var(--zlta); color: var(--modra); font-size: 1.2rem; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
     .dark-mode .theme-toggle { background-color: var(--zlta); color: #1e1e1e; }
 
-    footer { background-color: var(--modra); color: #fff; text-align: center; padding: 1.5rem; margin-top: 2rem; }
-    .dark-mode footer { background-color: #0c0c0c; color: var(--zlta); }
-    footer a { color: var(--zlta); text-decoration: none; margin: 0 0.5rem; }
-
-    main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem 2rem; }
+    /* --- RIADITELIA ŠTÝLY --- */
     h1 { text-align: center; margin-bottom: 2rem; }
-
-    /* --- ŠPECIFICKÉ ŠTÝLY PRE RIADITEĽOV --- */
-    
-    .directors-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
+    .directors-list { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
 
     .director-card {
       background-color: var(--karta-bg);
       border-radius: 8px;
       padding: 1.5rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      border-left: 5px solid var(--modra); /* Modrý pásik naľavo */
+      border-left: 5px solid var(--modra);
       display: flex;
       align-items: center;
       justify-content: space-between;
       transition: transform 0.2s ease;
-    }
-
-    .dark-mode .director-card {
-      border-left-color: var(--zlta); /* Žltý pásik v dark mode */
       border: 1px solid var(--border);
-      border-left: 5px solid var(--zlta);
     }
 
-    .director-card:hover {
-      transform: translateX(5px);
-    }
-
-    .director-info h2 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.4rem;
-    }
+    .dark-mode .director-card { border-left-color: var(--zlta); }
+    .director-card:hover { transform: translateX(5px); }
+    .director-info h2 { margin: 0 0 0.5rem 0; font-size: 1.4rem; }
 
     .director-years {
       font-weight: bold;
@@ -100,40 +132,44 @@
       white-space: nowrap;
     }
     
-    .dark-mode .director-years {
-      color: var(--zlta);
-      background: rgba(206, 237, 47, 0.15);
-    }
+    .dark-mode .director-years { color: var(--zlta); background: rgba(206, 237, 47, 0.15); }
 
     .current-director {
       border: 2px solid var(--modra);
       background: linear-gradient(to right, rgba(12, 47, 150, 0.05), var(--karta-bg));
     }
-    .dark-mode .current-director {
-      border-color: var(--zlta);
-      background: linear-gradient(to right, rgba(206, 237, 47, 0.05), var(--karta-bg));
-    }
+    .dark-mode .current-director { border-color: var(--zlta); }
+
+    footer { background-color: var(--modra); color: #fff; text-align: center; padding: 1.5rem; width: 100%; }
+    .dark-mode footer { background-color: #0c0c0c; color: var(--zlta); }
+    footer a { color: var(--zlta); text-decoration: none; margin: 0 0.5rem; }
 
     @media (max-width: 600px) {
+      .logo { height: 80px; }
+      .header-right { gap: 10px; }
       .director-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
-      .director-years { align-self: flex-start; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="index.html"><img src="logo.png" alt="Logo SPŠ" class="logo"></a>
+    <a href="index.html">
+      <img src="logo.png" alt="Logo SPŠ" class="logo" onerror="this.style.display='none'">
+    </a>
     <div class="header-right">
-      <button class="theme-toggle" id="themeToggle">🌙</button>
-      <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+      <button class="theme-toggle" id="themeToggle" title="Zmeniť tému">🌙</button>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </header>
 
   <nav id="mainNav">
     <a href="index.html">Domov</a>
     <a href="historia.html">História</a>
-    <a href="riaditelia.html" style="text-decoration: underline;">Riaditelia</a> <a href="studenti.html">Študenti</a>
+    <a href="riaditelia.html">Riaditelia</a> 
+    <a href="studenti.html">Študenti</a>
     <a href="kontakt.html">Kontakt</a>
   </nav>
 
@@ -144,7 +180,6 @@
     </p>
 
     <div class="directors-list">
-
       <div class="director-card current-director">
         <div class="director-info">
           <h2>Ing. Ľudovít Šimun</h2>
@@ -176,8 +211,7 @@
         </div>
         <div class="director-years"></div>
       </div>
-
-      </div>
+    </div>
   </main>
 
   <footer>
@@ -185,7 +219,6 @@
   </footer>
 
   <script>
-    // --- SKRIPT PRE MENU A TÉMU (Rovnaký ako inde) ---
     const toggleTheme = document.getElementById('themeToggle');
     const menuToggle = document.getElementById('menuToggle');
     const nav = document.getElementById('mainNav');
@@ -206,11 +239,12 @@
     menuToggle.addEventListener('click', () => {
       nav.classList.toggle('show');
       menuToggle.classList.toggle('active');
-      if (nav.classList.contains('show')) nav.style.top = `${header.offsetHeight}px`;
+      if (nav.classList.contains('show')) {
+          nav.style.top = `${header.offsetHeight}px`;
+      }
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
