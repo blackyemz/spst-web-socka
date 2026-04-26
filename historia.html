@@ -151,12 +151,15 @@
       background-color: transparent;
       width: 50%;
       box-sizing: border-box;
+      z-index: 1; /* PRIDANÉ: Základná vrstva */
+      transition: z-index 0.4s; /* PRIDANÉ: Plynulá zmena vrstvy */
     }
 
-    .timeline-item.left { left: 0; text-align: right; }
+    /* Zmena: text-align nastavený na left pre ľavú aj pravú stranu */
+    .timeline-item.left { left: 0; text-align: left; }
     .timeline-item.right { left: 50%; text-align: left; }
 
-    /* Obsah */
+    /* Obsah (Karta bez obrázku) */
     .timeline-content {
       padding: 20px;
       background-color: var(--karta-bg);
@@ -164,14 +167,16 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       border: 1px solid var(--border);
       position: relative;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* PRIDANÉ: Plynulá animácia */
     }
 
-    .timeline-content h3 { margin-top: 0; color: var(--modra); font-size: 1.5rem; }
+    .timeline-content h3 { margin-top: 0; color: var(--modra); font-size: 1.3rem; margin-bottom: 10px; }
     .dark-mode .timeline-content h3 { color: var(--zlta); }
     
     .timeline-content p {
         margin-bottom: 0;
         line-height: 1.6;
+        font-size: 0.95rem;
     }
 
     /* Krúžok na čiare */
@@ -186,8 +191,32 @@
       top: 20px;
       border-radius: 50%;
       z-index: 1;
+      transition: all 0.3s ease; /* PRIDANÉ: Plynulá animácia pre zmiznutie guličky */
     }
     .timeline-item.right::after { left: -10px; }
+
+    /* --- PRIDANÉ: HOVER EFEKTY --- */
+    .timeline-item:hover {
+      z-index: 100;
+    }
+    .timeline-item:hover::after {
+      opacity: 0;
+      transform: scale(0);
+    }
+    .timeline-item.left:hover .timeline-content {
+      transform: scale(1.15) translateX(5%);
+      box-shadow: 0 15px 40px rgba(12, 47, 150, 0.2);
+    }
+    .timeline-item.right:hover .timeline-content {
+      transform: scale(1.15) translateX(-5%);
+      box-shadow: 0 15px 40px rgba(12, 47, 150, 0.2);
+    }
+    .dark-mode .timeline-item.left:hover .timeline-content,
+    .dark-mode .timeline-item.right:hover .timeline-content {
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+      border-color: var(--zlta); 
+    }
+    /* ------------------------------ */
 
     footer { background-color: var(--modra); color: #fff; text-align: center; padding: 1.5rem; margin-top: 2rem; }
     .dark-mode footer { background-color: #0c0c0c; color: var(--zlta); }
@@ -202,6 +231,13 @@
       .timeline-item { width: 100%; padding-left: 70px; padding-right: 10px; }
       .timeline-item.left, .timeline-item.right { left: 0; text-align: left; }
       .timeline-item.left::after, .timeline-item.right::after { left: 21px; }
+      .timeline-content h3 { font-size: 1.2rem; }
+      
+      /* PRIDANÉ: Úprava hover efektu na mobiloch */
+      .timeline-item.left:hover .timeline-content, 
+      .timeline-item.right:hover .timeline-content {
+        transform: scale(1.05) translateX(0);
+      }
     }
   </style>
 </head>
@@ -242,22 +278,64 @@
 
       <div class="timeline-item left">
         <div class="timeline-content">
-          <h3>1951 – Založenie</h3>
-          <p>Založenie školy a začiatok výučby v pôvodných priestoroch.</p>
+          <h3>September 1951 – Slávnostné otvorenie</h3>
+          <p>Dňa 3. septembra inštitúcia oficiálne privítala svojich prvých študentov ako „Vyššia priemyselná škola strojnícka“. Záujem bol obrovský – už v úvodnom roku sa naplnilo až 26 tried v zameraní na strojárstvo a výrobu strojov, čo bol na vtedajšiu dobu mimoriadny úspech.</p>
         </div>
       </div>
 
       <div class="timeline-item right">
         <div class="timeline-content">
-          <h3>1975 – Modernizácia</h3>
-          <p>Rozšírenie školy, výstavba nových dielní a modernizácia vybavenia.</p>
+          <h3>1954 – Rozšírenie obzorov a nové zameranie</h3>
+          <p>Škola mení názov na „Priemyselná škola strojnícka“ a do ponuky pridáva veľmi žiadaný odbor zameraný na železničnú dopravu. Zaujímavosťou týchto rokov bolo aj dočasné zriadenie špecializovaných tried pre jadrovú techniku, ktoré pripravovali kádre priamo pre atómové elektrárne.</p>
         </div>
       </div>
 
       <div class="timeline-item left">
         <div class="timeline-content">
-          <h3>2025 – Súčasnosť</h3>
-          <p>Moderná technická škola pripravujúca odborníkov pre 21. storočie.</p>
+          <h3>1957 až 1961 – Šanca pre abiturientov</h3>
+          <p>Vzdelávacia ponuka sa rozšírila o dvojročné nadstavbové štúdium. Bolo určené predovšetkým absolventom stredných všeobecnovzdelávacích škôl, ktorí tu získavali odbornú prax v lokomotívnom a vozovom hospodárstve.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>1961 – Zrod legendárneho názvu</h3>
+          <p>Od januára 1961 začala inštitúcia oficiálne pôsobiť pod hlavičkou „Stredná priemyselná škola“. Toto pomenovanie sa hlboko zakorenilo v povedomí verejnosti a škola si ho udržala takmer nepretržite nasledujúce štyri desaťročia.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>70. roky – Prepojenie s praxou</h3>
+          <p>V septembri 1971 sa vyučovanie obohatilo o prístrojovú a automatizačnú techniku. Strojárske odvetvie sa navyše začalo úzko profilovať na potreby trnavskej automobilky TAZ. Obrovský rozmach zaznamenalo večerné a diaľkové štúdium, kde si doplňovali vzdelanie zamestnanci z podnikov z celého regiónu (Elektrárne, Cukrovar, Slovakofarma a i.).</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>1991 – Inovácie a modernizácia</h3>
+          <p>Reakciou na spoločenské zmeny po roku 1989 bolo zavedenie nového odboru s názvom „Technické a informatické služby“. Bol obľúbený najmä medzi dievčatami a spájal technické vedomosti s prácou na počítači, kancelárskou administratívou a dôrazom na výučbu cudzích jazykov.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>1997 – Zlúčenie a vznik gigantu</h3>
+          <p>Rozhodnutím krajských úradov bola k priemyslovke pričlenená Dievčenská odborná škola, čím vznikla „Združená stredná priemyselná škola“. Vďaka spojeným kapacitám, špičkovej budove a laboratóriám sa stala najväčšou odbornou školou na Slovensku v počte študentov aj zameraní.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>Od roku 2004 – Strategický partner PCA</h3>
+          <p>Škola potvrdzuje svoju kľúčovú rolu v regióne zapojením do medzinárodného projektu zameraného na rekvalifikáciu pracovnej sily. Stáva sa dôležitým partnerom pre novú automobilku PCA Slovakia, pre ktorú úspešne preškolila už viac než tisícku zamestnancov.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>2008 – Návrat ku koreňom</h3>
+          <p>S príchodom nového školského zákona sa inštitúcia v septembri 2008 vracia k svojmu tradičnému a rešpektovanému menu: Stredná priemyselná škola (SPŠ) Trnava. Je symbolom vyše sedemdesiatročnej tradície, počas ktorej vychovala desaťtisíce úspešných absolventov.</p>
         </div>
       </div>
 
@@ -307,6 +385,7 @@
 
 </body>
 </html>
+
 
 
 
