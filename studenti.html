@@ -382,7 +382,7 @@
         })
         .catch(error => {
           if (error.name === "SyntaxError") {
-            showError(`Súbor "${fileName}" má chybu v kóde.`, "Skontroluj čiarky a zátvorky.");
+            showError(`Súbor "${fileName}" má chybu v kóde.` );
           } else {
             showError("Nepodarilo sa načítať dáta.", error.message);
           }
