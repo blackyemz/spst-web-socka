@@ -26,18 +26,17 @@
       --border: #333;
     }
 
-    /* --- OPRAVA FOOTERA (Flexbox Layout) --- */
+    /* --- LAYOUT --- */
     html, body {
       height: 100%;
+      margin: 0;
     }
 
     body { 
-      margin: 0; 
       font-family: 'Segoe UI', Tahoma, sans-serif; 
       background-color: var(--pozadie); 
       color: var(--text); 
       transition: background-color 0.4s, color 0.4s; 
-      scroll-behavior: smooth; 
       display: flex;
       flex-direction: column;
     }
@@ -51,7 +50,7 @@
       box-sizing: border-box;
     }
 
-    /* --- HLAVIČKA --- */
+    /* --- HLAVIČKA (VRÁTENÁ PÔVODNÁ VEĽKOSŤ) --- */
     header {
       display: flex;
       justify-content: space-between;
@@ -62,15 +61,45 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      min-height: 80px;
+      min-height: 100px; /* Zväčšená minimálna výška */
     }
 
-    .logo { height: 100px; width: auto; object-fit: contain; background-color: #5e8fd8; padding: 5px 10px; border-radius: 8px; display: block; }
-    .header-right { display: flex; flex-direction: row; align-items: center; gap: 20px; }
+    .logo { 
+      height: 100px; /* Pôvodná veľkosť loga */
+      width: auto; 
+      object-fit: contain; 
+      background-color: #5e8fd8; 
+      padding: 5px 10px; 
+      border-radius: 8px; 
+      display: block;
+    }
+
+    .header-right { 
+      display: flex; 
+      flex-direction: row; 
+      align-items: center; 
+      gap: 20px; 
+    }
     
-    .menu-toggle { display: flex; flex-direction: column; justify-content: space-between; width: 32px; height: 24px; cursor: pointer; z-index: 1001; }
-    .menu-toggle span { display: block; height: 3px; width: 100%; background-color: var(--modra); border-radius: 3px; transition: 0.3s; }
+    .menu-toggle { 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: space-between; 
+      width: 32px; 
+      height: 24px; 
+      cursor: pointer; 
+    }
+
+    .menu-toggle span { 
+      display: block; 
+      height: 3px; 
+      width: 100%; 
+      background-color: var(--modra); 
+      border-radius: 3px; 
+      transition: 0.3s; 
+    }
     .dark-mode .menu-toggle span { background-color: var(--zlta); }
+    
     .menu-toggle.active span:nth-child(1) { transform: translateY(10.5px) rotate(45deg); }
     .menu-toggle.active span:nth-child(2) { opacity: 0; }
     .menu-toggle.active span:nth-child(3) { transform: translateY(-10.5px) rotate(-45deg); }
@@ -88,17 +117,31 @@
       box-shadow: 0 5px 10px rgba(0,0,0,0.1); 
       z-index: 999; 
       gap: 1.5rem; 
-      box-sizing: border-box; 
+      box-sizing: border-box;
     }
     nav.show { display: flex; animation: slideDown 0.3s ease-out; }
-    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    
+    @keyframes slideDown { 
+      from { opacity: 0; transform: translateY(-10px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
     
     nav a { text-decoration: none; color: var(--modra); font-weight: 600; font-size: 1.1rem; padding: 5px 10px; position: relative; }
-    nav a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px; background-color: var(--zlta); transition: width 0.3s ease; }
-    nav a:hover::after { width: 100%; }
     .dark-mode nav a { color: var(--zlta); }
     
-    .theme-toggle { background: none; border: 2px solid var(--zlta); color: var(--modra); font-size: 1.2rem; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    .theme-toggle { 
+      background: none; 
+      border: 2px solid var(--zlta); 
+      color: var(--modra); 
+      font-size: 1.2rem; 
+      border-radius: 50%; 
+      width: 45px; 
+      height: 45px; 
+      cursor: pointer; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+    }
     .dark-mode .theme-toggle { background-color: var(--zlta); color: #1e1e1e; }
 
     /* --- RIADITELIA ŠTÝLY --- */
@@ -110,7 +153,7 @@
       border-radius: 8px;
       padding: 1.5rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      border-left: 5px solid var(--modra);
+      border-left: 5px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -118,35 +161,30 @@
       border: 1px solid var(--border);
     }
 
-    .dark-mode .director-card { border-left-color: var(--zlta); }
     .director-card:hover { transform: translateX(5px); }
     .director-info h2 { margin: 0 0 0.5rem 0; font-size: 1.4rem; }
-
     .director-years {
       font-weight: bold;
       color: var(--modra);
       font-size: 1.1rem;
       background: rgba(12, 47, 150, 0.1);
-      padding: 5px 10px;
+      padding: 8px 15px;
       border-radius: 20px;
-      white-space: nowrap;
     }
-    
     .dark-mode .director-years { color: var(--zlta); background: rgba(206, 237, 47, 0.15); }
 
     .current-director {
-      border: 2px solid var(--modra);
+      border-left-color: var(--modra);
       background: linear-gradient(to right, rgba(12, 47, 150, 0.05), var(--karta-bg));
     }
-    .dark-mode .current-director { border-color: var(--zlta); }
+    .dark-mode .current-director { border-left-color: var(--zlta); }
 
-    footer { background-color: var(--modra); color: #fff; text-align: center; padding: 1.5rem; width: 100%; }
+    footer { background-color: var(--modra); color: #fff; text-align: center; padding: 1.5rem; margin-top: auto; }
     .dark-mode footer { background-color: #0c0c0c; color: var(--zlta); }
-    footer a { color: var(--zlta); text-decoration: none; margin: 0 0.5rem; }
 
     @media (max-width: 600px) {
       .logo { height: 80px; }
-      .header-right { gap: 10px; }
+      header { min-height: 80px; padding: 0.5rem 1rem; }
       .director-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
     }
   </style>
@@ -155,7 +193,7 @@
 
   <header>
     <a href="index.html">
-      <img src="logo.png" alt="Logo SPŠ" class="logo" onerror="this.style.display='none'">
+      <img src="logo.png" alt="Logo SPŠ" class="logo" onerror="this.style.backgroundColor='#0c2f96'; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTEwIDIwdjZoNHYtNmgybC00LTRsLTQgNGgyek0xMiA0TDIgMjBoNHYtNmgydjZoNHYtNmgydjZoNHYtNmgyTDQgNHoiLz48L3N2Zz4=';">
     </a>
     <div class="header-right">
       <button class="theme-toggle" id="themeToggle" title="Zmeniť tému">🌙</button>
@@ -185,31 +223,79 @@
           <h2>Ing. Ľudovít Šimun</h2>
           <p>Súčasný riaditeľ školy</p>
         </div>
-        <div class="director-years">2012 – súčasnosť</div>
+        <div class="director-years">2015 – súčasnosť</div>
       </div>
 
       <div class="director-card">
         <div class="director-info">
-          <h2>Ing. Meno Priezvisko</h2>
-          <p>Bývalý riaditeľ</p>
+          <h2>Ing. Vladimír Kuchár</h2>
+          <p>Bývalý riaditeľ školy</p>
         </div>
-        <div class="director-years"></div>
+        <div class="director-years">2005 – 2015</div>
       </div>
 
       <div class="director-card">
         <div class="director-info">
-          <h2>Ing. Meno Priezvisko</h2>
-          <p>Bývalý riaditeľ</p>
+          <h2>Mgr. Ivan Dubravec</h2>
+          <p>Bývalý riaditeľ školy</p>
         </div>
-        <div class="director-years"></div>
+        <div class="director-years">2002 – 2005</div>
       </div>
 
       <div class="director-card">
         <div class="director-info">
-          <h2>Ing. Meno Priezvisko</h2>
-          <p>Bývalý riaditeľ</p>
+          <h2>Ing. Katarína Michalková</h2>
+          <p>Bývalá riaditeľka školy</p>
         </div>
-        <div class="director-years"></div>
+        <div class="director-years">1994 – 2002</div>
+      </div>
+
+      <div class="director-card">
+        <div class="director-info">
+          <h2>Ing. Ján Ondruška</h2>
+          <p>Bývalý riaditeľ školy</p>
+        </div>
+        <div class="director-years">1991 – 1994</div>
+      </div>
+
+      <div class="director-card">
+        <div class="director-info">
+          <h2>Ing. Milan Martinák</h2>
+          <p>Bývalý riaditeľ školy</p>
+        </div>
+        <div class="director-years">1990 – 1991</div>
+      </div>
+
+      <div class="director-card">
+        <div class="director-info">
+          <h2>Ing. Silvester Krajčovič</h2>
+          <p>Bývalý riaditeľ školy</p>
+        </div>
+        <div class="director-years">1983 – 1990</div>
+      </div>
+
+      <div class="director-card">
+        <div class="director-info">
+          <h2>Ing. Ľudovít Augustín</h2>
+          <p>Bývalý riaditeľ školy</p>
+        </div>
+        <div class="director-years">1960 – 1983</div>
+      </div>
+
+      <div class="director-card">
+        <div class="director-info">
+          <h2>Ing. Miroslav Oscitý</h2>
+          <p>Bývalý riaditeľ školy</p>
+        </div>
+        <div class="director-years">1956 – 1960</div>
+      </div>
+     
+      <div class="director-card">
+        <div class="director-info">
+          <h2>Ing. Hugo Velan</h2>
+          <p>Bývalý riaditeľ školy</p>
+        </div>
+        <div class="director-years">1951 – 1956</div>
       </div>
     </div>
   </main>
